@@ -259,8 +259,6 @@ body[data-lang="en"] .hero-title { font-family: var(--fe); font-style: italic; f
 .btn-primary:disabled { opacity: .45; cursor: not-allowed; transform: none; }
 .btn-ghost { background: var(--bg3); color: var(--t1); border-color: var(--borderS); }
 .btn-ghost:hover { border-color: var(--gold); color: var(--gold); background: var(--goldbg); }
-.btn-danger-ghost { background: transparent; color: var(--t2); border-color: var(--borderS); }
-.btn-danger-ghost:hover { border-color: var(--red); color: var(--red2); background: var(--redbg); }
 
 /* ── DAILY DOCUMENTATION CARD ── */
 .daily-wrap {
@@ -573,7 +571,6 @@ footer {
     <input type="search" id="searchInput" placeholder="ابحث عن حدث، موقع، أو تاريخ..." autocomplete="off" aria-label="بحث">
   </div>
   <div class="hdr-controls">
-    <button class="hbtn hbtn-icon" id="apiKeyBtn" aria-label="إعداد مفتاح API" title="إعداد مفتاح API الخاص بك">🔑</button>
     <button class="hbtn" id="langBtn" aria-label="Switch language">EN</button>
     <button class="hbtn hbtn-icon" id="themeBtn" aria-label="Toggle theme">🌙</button>
   </div>
@@ -628,38 +625,28 @@ footer {
       <span class="badge badge-live" data-ar="مباشر" data-en="LIVE">مباشر</span>
       <span class="badge badge-new" id="newBadge" style="display:none" data-ar="جديد" data-en="NEW">جديد</span>
     </div>
-    <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
-      <button class="btn btn-danger-ghost" id="clearBtn" style="display:none" aria-label="Clear daily results">
-        <span aria-hidden="true">🗑</span>
-        <span data-ar="مسح" data-en="Clear">مسح</span>
-      </button>
-      <button class="btn btn-primary" id="fetchBtn" aria-label="Fetch today's events">
-        <span id="fetchIcon" aria-hidden="true">🔍</span>
-        <span id="fetchTxt" data-ar="جلب أحداث اليوم" data-en="Fetch Today's Events">جلب أحداث اليوم</span>
-      </button>
-    </div>
   </div>
 
   <div class="daily-wrap">
     <div class="daily-toolbar">
       <div class="daily-date-pill" id="dailyDatePill"></div>
-      <div class="daily-status" id="dailyStatusTxt" data-ar="اضغط على 'جلب أحداث اليوم' للحصول على آخر الأحداث الموثقة بالذكاء الاصطناعي" data-en="Press 'Fetch Today's Events' to get the latest AI-documented events">
-        اضغط على 'جلب أحداث اليوم' للحصول على آخر الأحداث الموثقة بالذكاء الاصطناعي
+      <div class="daily-status" id="dailyStatusTxt" data-ar="جاري جلب الأحداث تلقائياً..." data-en="Fetching events automatically...">
+        جاري جلب الأحداث تلقائياً...
       </div>
     </div>
 
     <div class="daily-body">
-      <div class="daily-empty" id="dailyEmpty">
+      <div class="daily-empty" id="dailyEmpty" style="display:none;">
         <div class="daily-empty-ico" aria-hidden="true">🌐</div>
         <p data-ar="يستخدم الذكاء الاصطناعي محرك بحث متصل بالإنترنت لجلب آخر الأحداث الموثقة المتعلقة بالجرائم والانتهاكات بحق المسلمين في جميع أنحاء العالم، مع ذكر مصادر موثوقة لكل حدث." data-en="AI uses a live web search engine to fetch the latest documented events related to crimes and violations against Muslims worldwide, citing reliable sources for each event.">
           يستخدم الذكاء الاصطناعي محرك بحث متصل بالإنترنت لجلب آخر الأحداث الموثقة المتعلقة بالجرائم والانتهاكات بحق المسلمين في جميع أنحاء العالم، مع ذكر مصادر موثوقة لكل حدث.
         </p>
       </div>
-      <div class="spinner-wrap" id="dailySpinner" style="display:none" role="status" aria-live="polite">
+      <div class="spinner-wrap" id="dailySpinner" role="status" aria-live="polite">
         <div class="spinner-ring" aria-hidden="true"></div>
         <div>
-          <div class="spinner-stage" id="spinnerStage">جارٍ البحث...</div>
-          <div class="spinner-msg" id="spinnerMsg">يبحث الذكاء الاصطناعي عن أحدث الأحداث الموثقة من مصادر عالمية موثوقة...</div>
+          <div class="spinner-stage" id="spinnerStage">جاري التحميل...</div>
+          <div class="spinner-msg" id="spinnerMsg">يتم تحميل أحدث التوثيقات اليومية...</div>
         </div>
       </div>
       <div id="dailyResults" style="display:none">
@@ -768,7 +755,6 @@ const REGIONS = {
 };
 
 const DB = [
-  // ... (محتوى قواعد البيانات DB كما هو تماماً دون أي تغيير) ...
   {
     id:1, year:1948, date:"1948-04-09",
     dd:{ ar:"9 أبريل 1948", en:"April 9, 1948" },
@@ -791,7 +777,7 @@ const DB = [
     lA:"فلسطين - الخليل", lE:"Palestine – Hebron",
     region:"middle-east", victims:200,
     vN:{ ar:"80 إلى 200 قتيل", en:"80 to 200 killed" },
-    dA:"ارتكبت قوات لواء الثامن في الجيش الإسرائيلي مجزرةً في قرية الدوايمة بقضاء الخليل. قُتل ما بين 80 و200 مدني فلسطيني. تشير شهادات موثقة لجنود إسرائيليين إلى قتل الأطفال وتدمير المنازل. أُخفيت تفاصيل المجزرة لسنوات.",
+    dA:"ارتكبت قوات لواء الثامن في الجيش الإسرفيلي مجزرةً في قرية الدوايمة بقضاء الخليل. قُتل ما بين 80 و200 مدني فلسطيني. تشير شهادات موثقة لجنود إسرائيليين إلى قتل الأطفال وتدمير المنازل. أُخفيت تفاصيل المجزرة لسنوات.",
     dE:"The Israeli 8th Brigade committed a massacre in the village of Al-Dawayima in the Hebron district. Between 80 and 200 Palestinian civilians were killed. Documented testimonies from Israeli soldiers indicate the killing of children and destruction of homes. Details were suppressed for years.",
     sources:[
       { title:"Wikipedia – Al-Dawayima massacre", url:"https://en.wikipedia.org/wiki/Al-Dawayima_massacre" },
@@ -1198,7 +1184,6 @@ let region = "all";
 let sort = "date-desc";
 let view = "grid";
 let query = "";
-let dailyFetched = false;
 let dailyCount = parseInt(localStorage.getItem("enc-daily-count") || "0");
 
 function applyLang() {
@@ -1358,151 +1343,35 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-// ── إضافة نافذة إعداد مفتاح API ──
-document.getElementById("apiKeyBtn").addEventListener("click", () => {
-  const currentKey = localStorage.getItem("anthropic_api_key") || "";
-  const msg = lang === "ar"
-    ? "أدخل مفتاح Anthropic API الخاص بك (يبدأ بـ sk-ant-...):\n\nملاحظة أمنية: سيتم حفظ المفتاح محلياً داخل متصفحك فقط، ولن يتم تخزينه أو إرساله إلى أي خادم وسيط باستثناء طلبات API نفسها."
-    : "Enter your Anthropic API Key (sk-ant-...):\n\nSecurity Note: The key will be stored locally in your browser only, and will not be sent to any server except the API requests.";
-  const key = prompt(msg, currentKey);
-  
-  if (key !== null) {
-    if (key.trim() === "") {
-        localStorage.removeItem("anthropic_api_key");
-        alert(lang === "ar" ? "تم مسح المفتاح بنجاح." : "Key cleared successfully.");
-    } else {
-        localStorage.setItem("anthropic_api_key", key.trim());
-        alert(lang === "ar" ? "تم حفظ المفتاح بنجاح!" : "Key saved successfully!");
-    }
-  }
-});
-
-async function fetchDaily() {
-  // ── التحقق من وجود مفتاح API قبل الطلب ──
-  const apiKey = localStorage.getItem("anthropic_api_key");
-  if (!apiKey) {
-    alert(lang === "ar" 
-        ? "عذراً، يجب عليك أولاً إدخال مفتاح Anthropic API الخاص بك بالضغط على أيقونة 🔑 في الشريط العلوي." 
-        : "Sorry, you must first enter your Anthropic API key by clicking the 🔑 icon in the header.");
-    return;
-  }
-
-  const btn = document.getElementById("fetchBtn");
-  const icon = document.getElementById("fetchIcon");
-  const txt = document.getElementById("fetchTxt");
-  const spinner = document.getElementById("dailySpinner");
-  const empty = document.getElementById("dailyEmpty");
-  const results = document.getElementById("dailyResults");
+// ── كود الجلب التلقائي من ملف الـ JSON ──
+async function loadDailyEvents() {
   const list = document.getElementById("dailyList");
+  const results = document.getElementById("dailyResults");
+  const empty = document.getElementById("dailyEmpty");
   const ftr = document.getElementById("dailyFtr");
   const statusTxt = document.getElementById("dailyStatusTxt");
-  const stage = document.getElementById("spinnerStage");
-  const msg = document.getElementById("spinnerMsg");
+  const spinner = document.getElementById("dailySpinner");
 
-  btn.disabled = true;
-  icon.textContent = "⏳";
-  txt.textContent = lang === "ar" ? "جارٍ الجلب..." : "Fetching...";
   empty.style.display = "none";
   results.style.display = "none";
   ftr.style.display = "none";
-  spinner.style.display = "flex";
-
-  const stageMessages = lang === "ar"
-    ? ["جارٍ البحث عن أحداث اليوم...", "تحليل المصادر الموثوقة...", "استخراج التفاصيل الكاملة...", "تنظيم النتائج..."]
-    : ["Searching today's events...", "Analyzing reliable sources...", "Extracting full details...", "Organizing results..."];
-  let si = 0;
-  const stageInterval = setInterval(() => {
-    si = (si + 1) % stageMessages.length;
-    stage.textContent = stageMessages[si];
-  }, 2200);
-
-  stage.textContent = stageMessages[0];
-  msg.textContent = lang === "ar"
-    ? "يبحث الذكاء الاصطناعي عن أحدث الأحداث الموثقة من مصادر عالمية موثوقة..."
-    : "AI is searching for the latest documented events from trusted global sources...";
-
-  const today = new Date();
-  const todayStr = today.toLocaleDateString("en-GB", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
-
-  const promptText = `Today is ${todayStr}.
-
-You are a professional human rights documentation researcher. Search the web for recent news (last 48-72 hours) about violence, crimes, massacres, attacks, persecution, or serious human rights violations targeting Muslims anywhere in the world.
-
-Find 3-5 distinct, documented events or ongoing situations. For each event provide:
-- A clear, factual title
-- Exact or approximate date
-- Geographic location (country and city/region)
-- Detailed description (at least 150 words) covering: what happened, who was involved, scale of victims/impact, context, and significance
-- Number of victims (killed/injured/displaced) if known, or describe the scale
-- 2-3 reliable source references with realistic URLs from news agencies, HRW, Amnesty, UN, Wikipedia, BBC, Al Jazeera, Reuters, etc.
-
-Respond ONLY with a valid JSON array. No markdown, no backticks, no extra text. Format:
-[
-  {
-    "titleAr": "العنوان بالعربية",
-    "titleEn": "Title in English",
-    "dateStr": "date string",
-    "locationAr": "الموقع بالعربية",
-    "locationEn": "Location in English",
-    "region": "one of: middle-east|south-asia|southeast-asia|central-asia|africa|caucasus|balkans|europe|other",
-    "victims": "description of victim count or scale",
-    "descriptionAr": "وصف تفصيلي باللغة العربية بما لا يقل عن 120 كلمة",
-    "descriptionEn": "Detailed description in English at least 120 words",
-    "sources": [
-      {"title": "Source Name – Article Title", "url": "https://realistic-url.com"}
-    ]
-  }
-]`;
+  spinner.style.display = "flex"; 
 
   try {
-    // ── استخدام CORS Proxy لتمرير الطلب وتجاوز حماية المتصفح ──
-    const targetUrl = encodeURIComponent("https://api.anthropic.com/v1/messages");
-    const proxyUrl = "https://corsproxy.io/?" + targetUrl;
+    const response = await fetch('data/daily_events.json');
+    if (!response.ok) throw new Error("لا توجد أحداث جديدة اليوم بعد.");
 
-    const response = await fetch(proxyUrl, {
-      method: "POST",
-      headers: { 
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01"
-      },
-      body: JSON.stringify({
-        model: "claude-3-5-sonnet-20241022", // تم تصحيح اسم النموذج إلى الإصدار المتاح رسمياً
-        max_tokens: 4000,
-        messages: [{ role: "user", content: promptText }]
-      })
-    });
-
-    clearInterval(stageInterval);
-
-    if (!response.ok) {
-        const errData = await response.json();
-        throw new Error(errData.error?.message || `HTTP ${response.status}`);
-    }
-
-    const data = await response.json();
-    const rawText = (data.content || [])
-      .filter(b => b.type === "text")
-      .map(b => b.text)
-      .join("");
-
-    let parsed = [];
-    try {
-      const jsonMatch = rawText.match(/\[[\s\S]*\]/);
-      if (jsonMatch) parsed = JSON.parse(jsonMatch[0]);
-    } catch (pe) {
-      throw new Error("JSON parse failed");
-    }
-
-    if (!Array.isArray(parsed) || parsed.length === 0) throw new Error("Empty results");
+    const parsed = await response.json();
+    if (!Array.isArray(parsed) || parsed.length === 0) throw new Error("الملف فارغ");
 
     list.innerHTML = "";
+    
     parsed.forEach(ev => {
       const title = lang === "ar" ? (ev.titleAr || ev.titleEn) : (ev.titleEn || ev.titleAr);
       const loc = lang === "ar" ? (ev.locationAr || ev.locationEn) : (ev.locationEn || ev.locationAr);
       const desc = lang === "ar" ? (ev.descriptionAr || ev.descriptionEn) : (ev.descriptionEn || ev.descriptionAr);
       const srcsTitle = lang === "ar" ? "المصادر والمراجع" : "Sources & References";
-
+      
       const srcsHTML = (ev.sources || []).map(s =>
         `<div class="src-row"><div class="src-dot"></div><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.title}</a></div>`
       ).join("");
@@ -1514,7 +1383,7 @@ Respond ONLY with a valid JSON array. No markdown, no backticks, no extra text. 
       el.innerHTML = `
         <div class="devent-head">
           <div class="devent-meta">
-            <span class="devent-datestr">${ev.dateStr || todayStr}</span>
+            <span class="devent-datestr">${ev.dateStr || new Date().toLocaleDateString("en-GB")}</span>
             <span class="devent-loc">📍 ${loc}</span>
           </div>
           ${regionLabel ? `<span class="dtag dtag-r">${regionLabel}</span>` : ""}
@@ -1528,70 +1397,35 @@ Respond ONLY with a valid JSON array. No markdown, no backticks, no extra text. 
           </div>
           <div class="devent-srcs">
             <div class="srcs-ttl">📚 ${srcsTitle}</div>
-            ${srcsHTML || `<div class="src-row"><div class="src-dot"></div><span style="color:var(--t3);font-size:.78rem">${lang === "ar" ? "يُراجع المصادر العامة" : "General sources referenced"}</span></div>`}
+            ${srcsHTML}
           </div>
         </div>`;
       list.appendChild(el);
     });
 
-    dailyCount++;
-    localStorage.setItem("enc-daily-count", dailyCount);
-    document.getElementById("sDailyCount").textContent = dailyCount;
-
     spinner.style.display = "none";
     results.style.display = "block";
     ftr.style.display = "flex";
     document.getElementById("newBadge").style.display = "inline-flex";
-    document.getElementById("clearBtn").style.display = "inline-flex";
-    dailyFetched = true;
+    
+    statusTxt.textContent = lang === "ar"
+      ? `تم التحديث التلقائي — ${parsed.length} أحداث اليوم`
+      : `Auto-updated — ${parsed.length} events today`;
 
     const ftrInfo = document.getElementById("dailyFtrInfo");
     ftrInfo.innerHTML = lang === "ar"
-      ? `تم الجلب في: <strong>${new Date().toLocaleTimeString("ar-EG")}</strong> · <strong>${parsed.length}</strong> أحداث موثقة`
-      : `Fetched at: <strong>${new Date().toLocaleTimeString("en-GB")}</strong> · <strong>${parsed.length}</strong> documented events`;
+      ? `تم الجلب التلقائي · <strong>${parsed.length}</strong> أحداث موثقة`
+      : `Auto-fetched · <strong>${parsed.length}</strong> documented events`;
 
-    statusTxt.textContent = lang === "ar"
-      ? `تم تحديث التوثيق بنجاح — ${parsed.length} أحداث جديدة`
-      : `Documentation updated successfully — ${parsed.length} new events`;
-
-    btn.disabled = false;
-    icon.textContent = "✓";
-    txt.textContent = lang === "ar" ? "تم التحديث" : "Updated";
-
-  } catch (err) {
-    clearInterval(stageInterval);
+  } catch (error) {
+    console.error("لم يتم العثور على أحداث مسبقة:", error);
     spinner.style.display = "none";
     empty.style.display = "flex";
-    empty.querySelector(".daily-empty-ico").textContent = "⚠";
-    empty.querySelector("p").textContent = lang === "ar"
-      ? `حدث خطأ أثناء جلب البيانات. تأكد من صحة المفتاح والاتصال بالإنترنت وحاول مرة أخرى. (${err.message})`
-      : `An error occurred while fetching data. Check your key and internet connection, then try again. (${err.message})`;
-    btn.disabled = false;
-    icon.textContent = "🔍";
-    txt.textContent = lang === "ar" ? "إعادة المحاولة" : "Retry";
-    statusTxt.textContent = lang === "ar" ? "فشل الجلب — يرجى المحاولة مرة أخرى" : "Fetch failed — please try again";
+    empty.querySelector("p").textContent = lang === "ar" 
+        ? "جاري انتظار التحديث التلقائي اليومي لجلب آخر الأحداث... (تأكد من عمل GitHub Actions)" 
+        : "Waiting for the daily automated update to fetch recent events... (Ensure GitHub Actions is running)";
+    statusTxt.textContent = lang === "ar" ? "يعمل تلقائياً في الخلفية" : "Running automatically in the background";
   }
-}
-
-function clearDaily() {
-  const empty = document.getElementById("dailyEmpty");
-  const results = document.getElementById("dailyResults");
-  const ftr = document.getElementById("dailyFtr");
-  results.style.display = "none";
-  ftr.style.display = "none";
-  empty.style.display = "flex";
-  empty.querySelector(".daily-empty-ico").textContent = "🌐";
-  empty.querySelector("p").textContent = lang === "ar"
-    ? "يستخدم الذكاء الاصطناعي محرك بحث متصل بالإنترنت لجلب آخر الأحداث الموثقة..."
-    : "AI uses a live web search engine to fetch the latest documented events...";
-  document.getElementById("newBadge").style.display = "none";
-  document.getElementById("clearBtn").style.display = "none";
-  document.getElementById("fetchIcon").textContent = "🔍";
-  document.getElementById("fetchTxt").textContent = lang === "ar" ? "جلب أحداث اليوم" : "Fetch Today's Events";
-  document.getElementById("dailyStatusTxt").textContent = lang === "ar"
-    ? "اضغط على 'جلب أحداث اليوم' للحصول على آخر الأحداث الموثقة"
-    : "Press 'Fetch Today's Events' to get the latest AI-documented events";
-  dailyFetched = false;
 }
 
 document.getElementById("langBtn").addEventListener("click", () => {
@@ -1639,9 +1473,7 @@ document.getElementById("vList").addEventListener("click", () => {
   document.getElementById("vGrid").classList.remove("on"); document.getElementById("vGrid").setAttribute("aria-pressed", "false");
 });
 
-document.getElementById("fetchBtn").addEventListener("click", fetchDaily);
-document.getElementById("clearBtn").addEventListener("click", clearDaily);
-document.getElementById("refreshBtn").addEventListener("click", fetchDaily);
+document.getElementById("refreshBtn").addEventListener("click", loadDailyEvents);
 document.getElementById("modalClose").addEventListener("click", closeModal);
 document.getElementById("modalOverlay").addEventListener("click", e => { if (e.target === e.currentTarget) closeModal(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
@@ -1651,6 +1483,9 @@ document.getElementById("sDailyCount").textContent = dailyCount;
 applyLang();
 applyTheme();
 updateDailyDatePill();
+
+// استدعاء الجلب التلقائي عند فتح الصفحة
+loadDailyEvents();
 </script>
 </body>
 </html>
