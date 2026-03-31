@@ -1,0 +1,42 @@
+name: التحديث اليومي للموسوعة
+
+on:
+  schedule:
+    # سيتم التشغيل يومياً الساعة 05:00 بتوقيت جرينتش (08:00 صباحاً بتوقيت مكة)
+    - cron: '0 5 * * *'
+  # يتيح لك تشغيل هذا الكود يدوياً من واجهة GitHub
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      # سحب الكود الحالي من المستودع
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # إعداد بيئة Node.js لتشغيل السكربت
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # تثبيت الحزم المطلوبة (axios لجلب البيانات من Anthropic)
+      - name: Install dependencies
+        run: npm install axios
+
+      # تشغيل سكربت الجلب
+      - name: Fetch and update daily data
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/fetch_daily.js
+
+      # حفظ التغييرات (الملف الجديد) ورفعها إلى GitHub
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/daily_events.json
+          # إذا لم تكن هناك تغييرات جديدة، لن يتم عمل commit
+          git commit -m "تحديث تلقائي: إضافة أحداث اليوم بالذكاء الاصطناعي" || exit 0
+          git push
