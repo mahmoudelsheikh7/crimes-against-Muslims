@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="موسوعة يومية لتوثيق الجرائم والمجازر بحق المسلمين | Daily encyclopedia documenting crimes and massacres against Muslims">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="موسوعة الجرائم بحق المسلمين">
+<meta property="og:description" content="توثيق يومي شامل للجرائم والمجازر المرتكبة بحق المسلمين عبر التاريخ وحتى اليوم">
+<title>موسوعة الجرائم بحق المسلمين | Crimes Against Muslims</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg0: #080808;
+  --bg1: #0f0f0f;
+  --bg2: #161616;
+  --bg3: #1e1e1e;
+  --bg4: #262626;
+  --bg5: #2e2e2e;
+  --t1: #ede8df;
+  --t2: #a89f94;
+  --t3: #6b6259;
+  --t4: #3d3630;
+  --gold: #c9903a;
+  --gold2: #dfa84e;
+  --gold3: #a07025;
+  --goldbg: rgba(201,144,58,.12);
+  --goldring: rgba(201,144,58,.22);
+  --red: #b83838;
+  --red2: #d45050;
+  --redbg: rgba(184,56,56,.11);
+  --redring: rgba(184,56,56,.3);
+  --blue: #3a7cc8;
+  --blue2: #5a9ae0;
+  --bluebg: rgba(58,124,200,.1);
+  --green: #3a9c5a;
+  --green2: #5ab87a;
+  --border: rgba(201,144,58,.18);
+  --borderS: rgba(255,255,255,.06);
+  --shadow: 0 8px 48px rgba(0,0,0,.7);
+  --shadowS: 0 2px 18px rgba(0,0,0,.5);
+  --r: 5px;
+  --rL: 10px;
+  --rXL: 16px;
+  --fa: 'Cairo', 'Amiri', sans-serif;
+  --fe: 'Playfair Display', 'Lora', serif;
+  --hh: 64px;
+  --tr: .22s ease;
+  --maxw: 1240px;
+}
+[data-theme="light"] {
+  --bg0: #f2ede2;
+  --bg1: #f8f3e8;
+  --bg2: #fdfaf4;
+  --bg3: #ffffff;
+  --bg4: #f2ede2;
+  --bg5: #e8e2d6;
+  --t1: #1a1410;
+  --t2: #4a4038;
+  --t3: #8a7f74;
+  --t4: #c4b9ae;
+  --gold: #8a5c10;
+  --gold2: #a07020;
+  --gold3: #6a4008;
+  --goldbg: rgba(138,92,16,.09);
+  --goldring: rgba(138,92,16,.22);
+  --red: #9a2828;
+  --red2: #c04040;
+  --redbg: rgba(154,40,40,.08);
+  --redring: rgba(154,40,40,.25);
+  --blue: #1a5a9a;
+  --blue2: #2a6aaa;
+  --bluebg: rgba(26,90,154,.08);
+  --border: rgba(138,92,16,.2);
+  --borderS: rgba(0,0,0,.07);
+  --shadow: 0 8px 48px rgba(0,0,0,.13);
+  --shadowS: 0 2px 16px rgba(0,0,0,.09);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg0);
+  color: var(--t1);
+  font-family: var(--fa);
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background var(--tr), color var(--tr);
+}
+body[data-lang="en"] { font-family: var(--fe); font-size: 17px; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg1); }
+::-webkit-scrollbar-thumb { background: var(--gold3); border-radius: 3px; }
+::selection { background: var(--gold); color: #000; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+button { cursor: pointer; }
+
+/* ── HEADER ── */
+.hdr {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--hh);
+  background: rgba(8,8,8,.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  z-index: 1000;
+  display: flex; align-items: center;
+  padding: 0 clamp(.75rem,3vw,1.5rem);
+  gap: clamp(.5rem,2vw,1rem);
+}
+[data-theme="light"] .hdr { background: rgba(242,237,226,.96); }
+.hdr-logo {
+  display: flex; align-items: center; gap: .55rem;
+  text-decoration: none; flex-shrink: 0;
+}
+.hdr-logo-ico {
+  width: 34px; height: 34px; min-width: 34px;
+  background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 4px; font-size: .95rem; color: #000; font-weight: 900;
+}
+.hdr-logo-txt { display: flex; flex-direction: column; line-height: 1.2; }
+.hdr-logo-txt b { font-size: .82rem; font-weight: 800; color: var(--t1); white-space: nowrap; }
+.hdr-logo-txt small { font-size: .62rem; color: var(--gold); letter-spacing: .05em; font-weight: 400; }
+.hdr-search {
+  flex: 1; max-width: 360px; position: relative;
+}
+.hdr-search input {
+  width: 100%;
+  background: var(--bg2); border: 1px solid var(--borderS);
+  color: var(--t1); padding: .48rem .85rem .48rem 2.2rem;
+  border-radius: var(--r); font-family: inherit; font-size: .83rem;
+  outline: none; transition: border-color var(--tr), box-shadow var(--tr);
+}
+html[dir="rtl"] .hdr-search input { padding: .48rem 2.2rem .48rem .85rem; }
+.hdr-search input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--goldbg); }
+.hdr-search input::placeholder { color: var(--t3); }
+.hdr-search-ico {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  left: .7rem; color: var(--t3); font-size: .8rem; pointer-events: none;
+}
+html[dir="rtl"] .hdr-search-ico { left: auto; right: .7rem; }
+.hdr-controls { display: flex; align-items: center; gap: .45rem; margin-inline-start: auto; }
+.hbtn {
+  background: var(--bg2); border: 1px solid var(--borderS);
+  color: var(--t2); padding: .38rem .7rem;
+  border-radius: var(--r); font-size: .76rem; font-family: inherit;
+  font-weight: 700; transition: all var(--tr); white-space: nowrap;
+  letter-spacing: .03em;
+}
+.hbtn:hover, .hbtn.on { background: var(--gold); color: #000; border-color: var(--gold); }
+.hbtn-icon {
+  width: 34px; height: 34px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .95rem;
+}
+
+/* ── LIVE BANNER ── */
+.live-bar {
+  margin-top: var(--hh);
+  background: linear-gradient(90deg,#8a1a1a 0%,#b02828 50%,#8a1a1a 100%);
+  padding: .5rem clamp(.75rem,3vw,1.5rem);
+  display: flex; align-items: center; gap: .75rem;
+  overflow: hidden;
+}
+.live-dot {
+  width: 7px; height: 7px; background: #fff; border-radius: 50%;
+  flex-shrink: 0; animation: lpulse 1.6s ease infinite;
+}
+@keyframes lpulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.35;transform:scale(.75)} }
+.live-lbl { font-size: .68rem; font-weight: 900; color: #fff; letter-spacing: .1em; flex-shrink: 0; }
+.live-scroll { flex: 1; overflow: hidden; }
+.live-inner {
+  display: inline-block; white-space: nowrap;
+  font-size: .76rem; color: rgba(255,255,255,.88); font-weight: 400;
+  animation: ticker 60s linear infinite;
+}
+html[dir="ltr"] .live-inner { animation: tickerR 60s linear infinite; }
+@keyframes ticker { 0%{transform:translateX(-100%)} 100%{transform:translateX(100vw)} }
+@keyframes tickerR { 0%{transform:translateX(100%)} 100%{transform:translateX(-100vw)} }
+
+/* ── HERO ── */
+.hero {
+  padding: clamp(3rem,6vw,5rem) clamp(.75rem,4vw,2rem) clamp(2rem,4vw,3rem);
+  text-align: center;
+  background:
+    radial-gradient(ellipse 100% 80% at 50% -5%, rgba(201,144,58,.11) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 80% 120%, rgba(201,144,58,.05) 0%, transparent 60%);
+  border-bottom: 1px solid var(--border); position: relative;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--goldbg); border: 1px solid var(--goldring);
+  color: var(--gold); padding: .3rem .9rem; border-radius: 50px;
+  font-size: .7rem; font-weight: 800; letter-spacing: .07em; margin-bottom: 1.2rem;
+}
+.hero-title {
+  font-size: clamp(1.65rem,4.5vw,3rem); font-weight: 900; line-height: 1.18;
+  margin-bottom: .85rem;
+  background: linear-gradient(140deg,var(--t1) 15%,var(--gold2) 65%,var(--gold) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+body[data-lang="en"] .hero-title { font-family: var(--fe); font-style: italic; font-weight: 700; }
+.hero-sub {
+  color: var(--t2); font-size: clamp(.82rem,2vw,.95rem); max-width: 640px;
+  margin: 0 auto 2rem; line-height: 1.9; font-weight: 300;
+}
+.hero-stats {
+  display: flex; justify-content: center;
+  gap: clamp(1.25rem,4vw,2.5rem); flex-wrap: wrap;
+}
+.hstat { display: flex; flex-direction: column; align-items: center; gap: .2rem; }
+.hstat-n {
+  font-size: clamp(1.5rem,3.5vw,2.1rem); font-weight: 900;
+  color: var(--gold); line-height: 1; font-family: var(--fe);
+}
+.hstat-l { font-size: .69rem; color: var(--t3); letter-spacing: .05em; font-weight: 400; }
+
+/* ── SECTION LAYOUT ── */
+.section {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: clamp(1.5rem,3vw,2.5rem) clamp(.75rem,3vw,1.5rem);
+}
+.sec-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.35rem; padding-bottom: .9rem;
+  border-bottom: 1px solid var(--borderS);
+  gap: .75rem; flex-wrap: wrap;
+}
+.sec-title {
+  display: flex; align-items: center; gap: .55rem;
+  font-size: clamp(.88rem,2vw,1rem); font-weight: 800; color: var(--t1);
+  flex-wrap: wrap;
+}
+.badge {
+  font-size: .63rem; padding: .2rem .5rem; border-radius: 3px;
+  font-weight: 800; letter-spacing: .06em;
+}
+.badge-live { background: var(--redbg); border: 1px solid var(--redring); color: var(--red2); }
+.badge-arch { background: var(--goldbg); border: 1px solid var(--border); color: var(--gold); }
+.badge-new {
+  background: var(--red); color: #fff; border-radius: 3px;
+  font-size: .6rem; padding: .18rem .45rem; font-weight: 900;
+  animation: nblink 2s ease infinite;
+}
+@keyframes nblink { 0%,100%{opacity:1} 50%{opacity:.55} }
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .48rem 1rem; border-radius: var(--r);
+  font-family: inherit; font-size: .78rem; font-weight: 800;
+  border: 1px solid transparent; transition: all var(--tr);
+  letter-spacing: .02em; white-space: nowrap; flex-shrink: 0;
+}
+.btn-primary { background: var(--gold); color: #000; border-color: var(--gold); }
+.btn-primary:hover:not(:disabled) { background: var(--gold2); transform: translateY(-1px); box-shadow: 0 4px 14px var(--goldbg); }
+.btn-primary:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+.btn-ghost { background: var(--bg3); color: var(--t1); border-color: var(--borderS); }
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); background: var(--goldbg); }
+.btn-danger-ghost { background: transparent; color: var(--t2); border-color: var(--borderS); }
+.btn-danger-ghost:hover { border-color: var(--red); color: var(--red2); background: var(--redbg); }
+
+/* ── DAILY DOCUMENTATION CARD ── */
+.daily-wrap {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--rXL); overflow: hidden;
+}
+.daily-toolbar {
+  background: var(--bg3); padding: .85rem clamp(.9rem,3vw,1.5rem);
+  border-bottom: 1px solid var(--borderS);
+  display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+}
+.daily-date-pill {
+  background: var(--goldbg); border: 1px solid var(--goldring);
+  color: var(--gold); padding: .28rem .75rem; border-radius: var(--r);
+  font-size: .72rem; font-weight: 800; font-family: var(--fe); letter-spacing: .04em;
+}
+.daily-status {
+  font-size: .72rem; color: var(--t3); line-height: 1.5; flex: 1;
+}
+.daily-body {
+  padding: clamp(1rem,3vw,1.5rem); min-height: 200px;
+}
+.daily-empty {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: clamp(2rem,4vw,3.5rem) 1rem;
+  text-align: center; gap: .85rem;
+}
+.daily-empty-ico { font-size: clamp(2rem,4vw,2.8rem); opacity: .3; }
+.daily-empty p { color: var(--t3); font-size: .85rem; max-width: 400px; line-height: 1.8; }
+.spinner-wrap {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: .9rem;
+  padding: clamp(2rem,4vw,3.5rem) 1rem; text-align: center;
+}
+.spinner-ring {
+  width: 44px; height: 44px; border: 3px solid var(--borderS);
+  border-top-color: var(--gold); border-radius: 50%;
+  animation: spin .75s linear infinite;
+}
+@keyframes spin { to{transform:rotate(360deg)} }
+.spinner-stage { font-size: .72rem; font-weight: 800; color: var(--gold); letter-spacing: .05em; }
+.spinner-msg { font-size: .8rem; color: var(--t3); max-width: 360px; line-height: 1.75; }
+.daily-events { display: flex; flex-direction: column; gap: 1.1rem; }
+
+.devent {
+  background: var(--bg1); border: 1px solid var(--borderS);
+  border-radius: var(--rL); overflow: hidden;
+  transition: border-color var(--tr), box-shadow var(--tr);
+}
+.devent:hover { border-color: var(--border); box-shadow: var(--shadowS); }
+.devent-head {
+  padding: clamp(.85rem,2vw,1.1rem) clamp(.9rem,3vw,1.4rem);
+  display: flex; justify-content: space-between; align-items: flex-start; gap: .75rem;
+}
+.devent-meta { display: flex; flex-direction: column; gap: .28rem; }
+.devent-datestr {
+  font-size: .68rem; color: var(--red2); font-weight: 800;
+  letter-spacing: .06em; font-family: var(--fe);
+}
+.devent-loc {
+  display: inline-flex; align-items: center; gap: .25rem;
+  color: var(--gold); font-size: .68rem; font-weight: 700;
+}
+.devent-title {
+  font-size: clamp(.95rem,2.5vw,1.05rem); font-weight: 800; color: var(--t1);
+  line-height: 1.38; padding: 0 clamp(.9rem,3vw,1.4rem) .7rem;
+}
+body[data-lang="en"] .devent-title { font-family: var(--fe); font-style: italic; }
+.devent-body { padding: 0 clamp(.9rem,3vw,1.4rem) clamp(.85rem,2vw,1.1rem); }
+.devent-desc { font-size: .84rem; color: var(--t2); line-height: 1.9; margin-bottom: .9rem; }
+.devent-tags { display: flex; gap: .35rem; flex-wrap: wrap; margin-bottom: .85rem; }
+.dtag {
+  padding: .2rem .55rem; border-radius: 3px;
+  font-size: .65rem; font-weight: 800; letter-spacing: .04em;
+}
+.dtag-v { background: var(--redbg); border: 1px solid var(--redring); color: var(--red2); }
+.dtag-r { background: var(--goldbg); border: 1px solid var(--goldring); color: var(--gold); }
+.dtag-t { background: var(--bluebg); border: 1px solid rgba(58,124,200,.25); color: var(--blue2); }
+.devent-srcs {
+  background: var(--bg2); border-radius: var(--r);
+  padding: .8rem 1rem; border: 1px solid var(--borderS);
+}
+.srcs-ttl {
+  font-size: .65rem; font-weight: 900; color: var(--t3);
+  letter-spacing: .07em; margin-bottom: .55rem;
+  display: flex; align-items: center; gap: .3rem;
+}
+.src-row { display: flex; align-items: flex-start; gap: .38rem; margin-bottom: .38rem; font-size: .78rem; }
+.src-row:last-child { margin-bottom: 0; }
+.src-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; margin-top: .43rem; flex-shrink: 0; }
+.src-row a { color: var(--gold); text-decoration: none; line-height: 1.5; transition: color var(--tr); word-break: break-word; }
+.src-row a:hover { color: var(--gold2); text-decoration: underline; }
+
+.daily-ftr {
+  padding: .85rem clamp(.9rem,3vw,1.5rem); border-top: 1px solid var(--borderS);
+  background: var(--bg3); display: flex; align-items: center;
+  justify-content: space-between; gap: .75rem; flex-wrap: wrap;
+}
+.daily-ftr-info { font-size: .7rem; color: var(--t3); line-height: 1.6; }
+.daily-ftr-info strong { color: var(--gold); }
+
+/* ── FILTERS BAR ── */
+.filters {
+  background: var(--bg1); border-bottom: 1px solid var(--borderS);
+  padding: .75rem clamp(.75rem,3vw,1.5rem);
+  display: flex; gap: .75rem; align-items: center; flex-wrap: wrap;
+  position: sticky; top: var(--hh); z-index: 900;
+}
+.fl-label { font-size: .7rem; color: var(--t3); font-weight: 800; letter-spacing: .06em; white-space: nowrap; }
+.fl-chips { display: flex; gap: .38rem; flex-wrap: wrap; flex: 1; }
+.chip {
+  padding: .28rem .7rem; border-radius: 50px;
+  font-size: .73rem; font-weight: 700; font-family: inherit;
+  border: 1px solid var(--borderS); background: transparent;
+  color: var(--t2); transition: all var(--tr); letter-spacing: .02em;
+}
+.chip:hover { color: var(--gold); border-color: var(--gold); }
+.chip.on { background: var(--gold); color: #000; border-color: var(--gold); }
+.fl-sep { width: 1px; height: 20px; background: var(--borderS); flex-shrink: 0; }
+.fl-sort {
+  background: var(--bg2); border: 1px solid var(--borderS); color: var(--t1);
+  padding: .28rem .65rem; border-radius: var(--r); font-family: inherit;
+  font-size: .75rem; outline: none; flex-shrink: 0;
+}
+.fl-sort:focus { border-color: var(--gold); }
+.view-tgl { display: flex; gap: .3rem; margin-inline-start: auto; flex-shrink: 0; }
+.vtbtn {
+  background: transparent; border: 1px solid var(--borderS); color: var(--t3);
+  width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
+  border-radius: var(--r); font-size: .8rem; transition: all var(--tr);
+}
+.vtbtn.on, .vtbtn:hover { background: var(--gold); color: #000; border-color: var(--gold); }
+
+/* ── EVENTS GRID ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%,320px), 1fr));
+  gap: 1.2rem;
+}
+.grid.list-view { grid-template-columns: 1fr; }
+.no-results {
+  grid-column: 1 / -1; text-align: center;
+  padding: clamp(3rem,6vw,5rem) 1rem; color: var(--t3);
+}
+.no-results-ico { font-size: 2.2rem; opacity: .3; margin-bottom: .65rem; }
+
+/* ── EVENT CARD ── */
+.ecard {
+  background: var(--bg2); border: 1px solid var(--borderS); border-radius: var(--rL);
+  overflow: hidden; transition: all var(--tr); cursor: pointer;
+  display: flex; flex-direction: column; position: relative;
+  animation: fadeUp .38s ease both;
+}
+@keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+.ecard::before {
+  content: ''; position: absolute;
+  inset-inline-start: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--gold); transform: scaleY(0);
+  transform-origin: top; transition: transform .28s ease;
+}
+.ecard:hover { background: var(--bg3); border-color: var(--border); box-shadow: var(--shadowS); transform: translateY(-2px); }
+.ecard:hover::before, .ecard.open::before { transform: scaleY(1); }
+.ecard.open { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold), var(--shadow); }
+.ecard-head {
+  padding: clamp(.85rem,2vw,1.1rem) clamp(.9rem,3vw,1.35rem) .75rem;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: .6rem;
+}
+.ecard-meta { display: flex; flex-direction: column; gap: .28rem; }
+.ecard-date { font-size: .68rem; color: var(--gold); font-weight: 800; letter-spacing: .07em; font-family: var(--fe); }
+.ecard-rtag {
+  display: inline-flex; align-items: center; gap: .22rem;
+  background: var(--goldbg); border: 1px solid var(--border);
+  color: var(--gold); padding: .17rem .5rem; border-radius: 3px;
+  font-size: .64rem; font-weight: 800; letter-spacing: .04em; width: fit-content;
+}
+.ecard-body { padding: 0 clamp(.9rem,3vw,1.35rem) .9rem; flex: 1; }
+.ecard-title {
+  font-size: clamp(.92rem,2.2vw,1.02rem); font-weight: 800; color: var(--t1);
+  margin-bottom: .45rem; line-height: 1.4;
+}
+body[data-lang="en"] .ecard-title { font-family: var(--fe); font-style: italic; font-size: clamp(.92rem,2.2vw,1.08rem); }
+.ecard-excerpt {
+  font-size: .81rem; color: var(--t2); line-height: 1.78;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.ecard-foot {
+  padding: .78rem clamp(.9rem,3vw,1.35rem); border-top: 1px solid var(--borderS);
+  display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+}
+.vic-badge {
+  display: flex; align-items: center; gap: .32rem;
+  font-size: .71rem; color: var(--red2); font-weight: 700;
+}
+.rmb {
+  font-size: .71rem; color: var(--gold); font-weight: 800;
+  background: none; border: none; font-family: inherit;
+  display: flex; align-items: center; gap: .22rem;
+  transition: color var(--tr); padding: 0;
+}
+.rmb:hover { color: var(--gold2); }
+.rmb .arr { transition: transform var(--tr); display: inline-block; }
+.ecard.open .rmb .arr { transform: rotate(180deg); }
+.ecard-expand {
+  display: none; padding: 0 clamp(.9rem,3vw,1.35rem) clamp(.9rem,3vw,1.35rem);
+  border-top: 1px solid var(--borderS);
+}
+.ecard.open .ecard-expand { display: block; }
+.ecard-long {
+  font-size: .85rem; color: var(--t2); line-height: 1.9;
+  margin: .9rem 0 1rem;
+}
+.srcs-box {
+  background: var(--bg1); border-radius: var(--r);
+  padding: .85rem 1.05rem; border: 1px solid var(--borderS);
+}
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.88);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  z-index: 2000; display: flex; align-items: center; justify-content: center;
+  padding: clamp(.75rem,3vw,1.5rem);
+  opacity: 0; pointer-events: none; transition: opacity .28s ease;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--rXL);
+  max-width: 720px; width: 100%; max-height: 88vh; overflow-y: auto;
+  transform: scale(.94) translateY(16px);
+  transition: transform .28s ease; box-shadow: var(--shadow);
+}
+.modal-overlay.open .modal { transform: scale(1) translateY(0); }
+.modal-head {
+  padding: clamp(1.1rem,3vw,1.6rem) clamp(1.1rem,4vw,1.75rem) clamp(.9rem,2vw,1.1rem);
+  border-bottom: 1px solid var(--borderS);
+  position: sticky; top: 0; background: var(--bg2); z-index: 1;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: .75rem;
+}
+.modal-close {
+  background: var(--bg3); border: 1px solid var(--borderS); color: var(--t2);
+  width: 33px; height: 33px; border-radius: 50%; font-size: .95rem;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  transition: all var(--tr);
+}
+.modal-close:hover { background: var(--red); color: #fff; border-color: var(--red); }
+.modal-body { padding: clamp(1.1rem,3vw,1.6rem) clamp(1.1rem,4vw,1.75rem) clamp(1.25rem,3vw,1.75rem); }
+.modal-date { font-size: .7rem; color: var(--gold); font-weight: 800; letter-spacing: .07em; font-family: var(--fe); margin-bottom: .38rem; }
+.modal-title { font-size: clamp(1.2rem,3.5vw,1.55rem); font-weight: 800; line-height: 1.3; margin-bottom: .65rem; }
+body[data-lang="en"] .modal-title { font-family: var(--fe); font-style: italic; font-size: clamp(1.2rem,3.5vw,1.65rem); }
+.modal-tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: 1.3rem; }
+.mtag { padding: .2rem .6rem; border-radius: 3px; font-size: .65rem; font-weight: 800; letter-spacing: .04em; }
+.mtag-r { background: var(--goldbg); border: 1px solid var(--goldring); color: var(--gold); }
+.mtag-v { background: var(--redbg); border: 1px solid var(--redring); color: var(--red2); }
+.modal-desc { font-size: clamp(.84rem,2vw,.93rem); color: var(--t2); line-height: 2; margin-bottom: 1.4rem; }
+.modal-srcs { background: var(--bg1); border-radius: var(--r); padding: 1.05rem 1.2rem; border: 1px solid var(--borderS); }
+
+/* ── FOOTER ── */
+footer {
+  margin-top: clamp(2rem,4vw,3.5rem); border-top: 1px solid var(--borderS);
+  padding: clamp(1.5rem,3vw,2.25rem) clamp(.75rem,3vw,1.5rem);
+  text-align: center; color: var(--t3);
+}
+.ft-disc { max-width: 660px; margin: 0 auto .75rem; line-height: 1.85; font-size: .78rem; }
+.ft-links { display: flex; justify-content: center; gap: 1.1rem; flex-wrap: wrap; margin-bottom: .75rem; }
+.ft-links a { color: var(--t3); text-decoration: none; font-size: .72rem; transition: color var(--tr); }
+.ft-links a:hover { color: var(--gold); }
+.ft-copy { font-size: .66rem; opacity: .4; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .hdr-logo-txt small { display: none; }
+  .hdr-search { max-width: 160px; }
+  .hero-stats { gap: 1rem; }
+  .fl-chips { gap: .3rem; }
+  .chip { font-size: .68rem; padding: .24rem .58rem; }
+  .daily-toolbar { gap: .5rem; }
+  .devent-head { flex-direction: column; gap: .35rem; }
+  .sec-head { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 400px) {
+  .hdr-logo-txt b { font-size: .75rem; }
+  .live-bar { gap: .5rem; }
+  .live-lbl { display: none; }
+  .btn span:first-child { display: none; }
+}
+@media (min-width: 900px) {
+  .grid { grid-template-columns: repeat(auto-fill, minmax(340px,1fr)); }
+}
+@media (min-width: 1200px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (hover: none) {
+  .ecard:hover { transform: none; }
+}
+</style>
+</head>
+<body data-theme="dark" data-lang="ar">
+
+<!-- HEADER -->
+<header class="hdr">
+  <a class="hdr-logo" href="#" aria-label="الصفحة الرئيسية">
+    <div class="hdr-logo-ico" aria-hidden="true">☽</div>
+    <div class="hdr-logo-txt">
+      <b data-ar="موسوعة الجرائم بحق المسلمين" data-en="Crimes Against Muslims">موسوعة الجرائم بحق المسلمين</b>
+      <small data-ar="توثيق يومي بالذكاء الاصطناعي" data-en="AI-Powered Daily Documentation">توثيق يومي بالذكاء الاصطناعي</small>
+    </div>
+  </a>
+  <div class="hdr-search" role="search">
+    <span class="hdr-search-ico" aria-hidden="true">🔍</span>
+    <input type="search" id="searchInput" placeholder="ابحث عن حدث، موقع، أو تاريخ..." autocomplete="off" aria-label="بحث">
+  </div>
+  <div class="hdr-controls">
+    <button class="hbtn" id="langBtn" aria-label="Switch language">EN</button>
+    <button class="hbtn hbtn-icon" id="themeBtn" aria-label="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<!-- LIVE TICKER -->
+<div class="live-bar" role="marquee" aria-label="أحداث جارية">
+  <div class="live-dot" aria-hidden="true"></div>
+  <span class="live-lbl" id="liveLbl">مباشر</span>
+  <div class="live-scroll" aria-hidden="true">
+    <span class="live-inner" id="liveTicker">
+      🔴 غزة: استمرار العدوان الإسرائيلي — أكثر من 50,000 شهيد حتى 2025 &nbsp;&nbsp;|&nbsp;&nbsp; 🔴 ميانمار: استمرار معاناة الروهينغا &nbsp;&nbsp;|&nbsp;&nbsp; 🔴 الصين: استمرار اعتقال أبناء الإيغور المسلمين في شينجيانغ &nbsp;&nbsp;|&nbsp;&nbsp; 🔴 أفريقيا الوسطى: عنف طائفي مستمر ضد المسلمين &nbsp;&nbsp;|&nbsp;&nbsp; LIVE: Gaza ongoing assault — 50,000+ martyrs &nbsp;&nbsp;|&nbsp;&nbsp; Myanmar: Rohingya persecution continues &nbsp;&nbsp;|&nbsp;&nbsp; China: Uyghur detention ongoing &nbsp;&nbsp;|&nbsp;&nbsp; Central Africa: anti-Muslim sectarian violence
+    </span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge" aria-hidden="true">
+    <span>📡</span>
+    <span data-ar="توثيق يومي بالذكاء الاصطناعي" data-en="AI-Powered Daily Documentation">توثيق يومي بالذكاء الاصطناعي</span>
+  </div>
+  <h1 class="hero-title" data-ar="الجرائم والمجازر بحق المسلمين — توثيق يومي شامل" data-en="Crimes &amp; Massacres Against Muslims — Daily Comprehensive Documentation">
+    الجرائم والمجازر بحق المسلمين — توثيق يومي شامل
+  </h1>
+  <p class="hero-sub" data-ar="يجمع هذا الموقع أرشيفاً تاريخياً موثوقاً بتوثيق يومي مدعوم بالذكاء الاصطناعي يتتبع آخر الأحداث حول العالم. كل حدث مدعوم بمصادر من ويكيبيديا ومنظمات حقوق الإنسان والأمم المتحدة." data-en="This site combines a verified historical archive with AI-powered daily documentation tracking the latest events worldwide. Every event is backed by sources from Wikipedia, human rights organizations, and the United Nations.">
+    يجمع هذا الموقع أرشيفاً تاريخياً موثوقاً بتوثيق يومي مدعوم بالذكاء الاصطناعي يتتبع آخر الأحداث حول العالم. كل حدث مدعوم بمصادر من ويكيبيديا ومنظمات حقوق الإنسان والأمم المتحدة.
+  </p>
+  <div class="hero-stats">
+    <div class="hstat">
+      <span class="hstat-n" id="sTotal">28</span>
+      <span class="hstat-l" data-ar="حدث تاريخي موثق" data-en="Historical Events Documented">حدث تاريخي موثق</span>
+    </div>
+    <div class="hstat">
+      <span class="hstat-n">8</span>
+      <span class="hstat-l" data-ar="مناطق جغرافية" data-en="Geographic Regions">مناطق جغرافية</span>
+    </div>
+    <div class="hstat">
+      <span class="hstat-n" id="sDailyCount">0</span>
+      <span class="hstat-l" data-ar="تقرير يومي منذ الإطلاق" data-en="Daily Reports Generated">تقرير يومي منذ الإطلاق</span>
+    </div>
+    <div class="hstat">
+      <span class="hstat-n">75+</span>
+      <span class="hstat-l" data-ar="سنة من التوثيق" data-en="Years of Documentation">سنة من التوثيق</span>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY SECTION -->
+<div class="section">
+  <div class="sec-head">
+    <div class="sec-title">
+      <span aria-hidden="true">📡</span>
+      <span data-ar="التوثيق اليومي المباشر" data-en="Live Daily Documentation">التوثيق اليومي المباشر</span>
+      <span class="badge badge-live" data-ar="مباشر" data-en="LIVE">مباشر</span>
+      <span class="badge badge-new" id="newBadge" style="display:none" data-ar="جديد" data-en="NEW">جديد</span>
+    </div>
+    <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+      <button class="btn btn-danger-ghost" id="clearBtn" style="display:none" aria-label="Clear daily results">
+        <span aria-hidden="true">🗑</span>
+        <span data-ar="مسح" data-en="Clear">مسح</span>
+      </button>
+      <button class="btn btn-primary" id="fetchBtn" aria-label="Fetch today's events">
+        <span id="fetchIcon" aria-hidden="true">🔍</span>
+        <span id="fetchTxt" data-ar="جلب أحداث اليوم" data-en="Fetch Today's Events">جلب أحداث اليوم</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="daily-wrap">
+    <div class="daily-toolbar">
+      <div class="daily-date-pill" id="dailyDatePill"></div>
+      <div class="daily-status" id="dailyStatusTxt" data-ar="اضغط على 'جلب أحداث اليوم' للحصول على آخر الأحداث الموثقة بالذكاء الاصطناعي" data-en="Press 'Fetch Today's Events' to get the latest AI-documented events">
+        اضغط على 'جلب أحداث اليوم' للحصول على آخر الأحداث الموثقة بالذكاء الاصطناعي
+      </div>
+    </div>
+
+    <div class="daily-body">
+      <div class="daily-empty" id="dailyEmpty">
+        <div class="daily-empty-ico" aria-hidden="true">🌐</div>
+        <p data-ar="يستخدم الذكاء الاصطناعي محرك بحث متصل بالإنترنت لجلب آخر الأحداث الموثقة المتعلقة بالجرائم والانتهاكات بحق المسلمين في جميع أنحاء العالم، مع ذكر مصادر موثوقة لكل حدث." data-en="AI uses a live web search engine to fetch the latest documented events related to crimes and violations against Muslims worldwide, citing reliable sources for each event.">
+          يستخدم الذكاء الاصطناعي محرك بحث متصل بالإنترنت لجلب آخر الأحداث الموثقة المتعلقة بالجرائم والانتهاكات بحق المسلمين في جميع أنحاء العالم، مع ذكر مصادر موثوقة لكل حدث.
+        </p>
+      </div>
+      <div class="spinner-wrap" id="dailySpinner" style="display:none" role="status" aria-live="polite">
+        <div class="spinner-ring" aria-hidden="true"></div>
+        <div>
+          <div class="spinner-stage" id="spinnerStage">جارٍ البحث...</div>
+          <div class="spinner-msg" id="spinnerMsg">يبحث الذكاء الاصطناعي عن أحدث الأحداث الموثقة من مصادر عالمية موثوقة...</div>
+        </div>
+      </div>
+      <div id="dailyResults" style="display:none">
+        <div class="daily-events" id="dailyList"></div>
+      </div>
+    </div>
+
+    <div class="daily-ftr" id="dailyFtr" style="display:none">
+      <div class="daily-ftr-info" id="dailyFtrInfo"></div>
+      <button class="btn btn-ghost" id="refreshBtn" style="font-size:.74rem;padding:.38rem .85rem" aria-label="Refresh">
+        <span aria-hidden="true">🔄</span>
+        <span data-ar="تحديث" data-en="Refresh">تحديث</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ARCHIVE FILTERS -->
+<div class="filters" role="navigation" aria-label="فلاتر الأرشيف">
+  <span class="fl-label" data-ar="المنطقة:" data-en="Region:">المنطقة:</span>
+  <div class="fl-chips" id="chipContainer" role="group" aria-label="Filter by region">
+    <button class="chip on" data-r="all" data-ar="الكل" data-en="All">الكل</button>
+    <button class="chip" data-r="middle-east" data-ar="الشرق الأوسط" data-en="Middle East">الشرق الأوسط</button>
+    <button class="chip" data-r="balkans" data-ar="البلقان" data-en="Balkans">البلقان</button>
+    <button class="chip" data-r="south-asia" data-ar="جنوب آسيا" data-en="S. Asia">جنوب آسيا</button>
+    <button class="chip" data-r="southeast-asia" data-ar="جنوب شرق آسيا" data-en="SE. Asia">جنوب شرق آسيا</button>
+    <button class="chip" data-r="central-asia" data-ar="وسط آسيا" data-en="C. Asia">وسط آسيا</button>
+    <button class="chip" data-r="africa" data-ar="أفريقيا" data-en="Africa">أفريقيا</button>
+    <button class="chip" data-r="caucasus" data-ar="القوقاز" data-en="Caucasus">القوقاز</button>
+    <button class="chip" data-r="europe" data-ar="أوروبا" data-en="Europe">أوروبا</button>
+  </div>
+  <div class="fl-sep" aria-hidden="true"></div>
+  <select class="fl-sort" id="sortSel" aria-label="Sort events">
+    <option value="date-desc" data-ar="الأحدث أولاً" data-en="Newest First">الأحدث أولاً</option>
+    <option value="date-asc" data-ar="الأقدم أولاً" data-en="Oldest First">الأقدم أولاً</option>
+    <option value="victims-desc" data-ar="الأكثر ضحايا" data-en="Most Victims">الأكثر ضحايا</option>
+    <option value="alpha" data-ar="أبجدياً" data-en="Alphabetical">أبجدياً</option>
+  </select>
+  <div class="view-tgl" role="group" aria-label="View toggle">
+    <button class="vtbtn on" id="vGrid" aria-label="Grid view" aria-pressed="true">⊞</button>
+    <button class="vtbtn" id="vList" aria-label="List view" aria-pressed="false">☰</button>
+  </div>
+</div>
+
+<!-- ARCHIVE SECTION -->
+<div class="section" id="archiveSection">
+  <div class="sec-head">
+    <div class="sec-title">
+      <span aria-hidden="true">📚</span>
+      <span data-ar="الأرشيف التاريخي" data-en="Historical Archive">الأرشيف التاريخي</span>
+      <span class="badge badge-arch" id="archBadge">28</span>
+    </div>
+    <div style="font-size:.78rem;color:var(--t3)">
+      <strong id="resNum" style="color:var(--gold);font-size:.88rem">28</strong>
+      <span data-ar=" حدث موثق" data-en=" documented events"> حدث موثق</span>
+    </div>
+  </div>
+  <div class="grid" id="eventsGrid" role="list"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="ft-disc" data-ar="جميع المعلومات مستقاة من مصادر موثوقة ومعترف بها أكاديمياً. هذا الموقع يهدف للتوثيق التاريخي والتوعية بحقوق الإنسان حصراً، ولا يهدف لإثارة الكراهية أو التعصب." data-en="All information is sourced from reputable and internationally recognized academic sources. This site is exclusively aimed at historical documentation and human rights awareness, and does not aim to incite hatred or intolerance.">
+    جميع المعلومات مستقاة من مصادر موثوقة ومعترف بها أكاديمياً. هذا الموقع يهدف للتوثيق التاريخي والتوعية بحقوق الإنسان حصراً، ولا يهدف لإثارة الكراهية أو التعصب.
+  </p>
+  <div class="ft-links">
+    <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.wikipedia.org" target="_blank" rel="noopener">Wikipedia</a>
+    <a href="https://www.hrw.org" target="_blank" rel="noopener">Human Rights Watch</a>
+    <a href="https://www.amnesty.org" target="_blank" rel="noopener">Amnesty International</a>
+    <a href="https://www.ohchr.org" target="_blank" rel="noopener">UN OHCHR</a>
+    <a href="https://www.icj-cij.org" target="_blank" rel="noopener">ICJ</a>
+  </div>
+  <p class="ft-copy" data-ar="© 2024–2025 موسوعة الجرائم بحق المسلمين · مفتوح المصدر على GitHub · مدعوم بالذكاء الاصطناعي" data-en="© 2024–2025 Encyclopedia of Crimes Against Muslims · Open Source on GitHub · AI-Powered">
+    © 2024–2025 موسوعة الجرائم بحق المسلمين · مفتوح المصدر على GitHub · مدعوم بالذكاء الاصطناعي
+  </p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" id="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-date" id="modalDate"></div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+      <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-srcs">
+        <div class="srcs-ttl"><span aria-hidden="true">📚</span><span id="modalSrcsTitle">المصادر والمراجع</span></div>
+        <div id="modalSrcs"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const REGIONS = {
+  "middle-east":  { ar: "الشرق الأوسط",    en: "Middle East"    },
+  "balkans":      { ar: "البلقان",           en: "Balkans"        },
+  "south-asia":   { ar: "جنوب آسيا",        en: "South Asia"     },
+  "southeast-asia":{ ar: "جنوب شرق آسيا",  en: "Southeast Asia" },
+  "central-asia": { ar: "وسط آسيا",         en: "Central Asia"   },
+  "africa":       { ar: "أفريقيا",          en: "Africa"         },
+  "caucasus":     { ar: "القوقاز",           en: "Caucasus"       },
+  "europe":       { ar: "أوروبا",            en: "Europe"         }
+};
+
+const DB = [
+  {
+    id:1, year:1948, date:"1948-04-09",
+    dd:{ ar:"9 أبريل 1948", en:"April 9, 1948" },
+    nA:"مجزرة دير ياسين", nE:"Deir Yassin Massacre",
+    lA:"فلسطين - القدس", lE:"Palestine – Jerusalem",
+    region:"middle-east", victims:107,
+    vN:{ ar:"107 قتيل على الأقل", en:"At least 107 killed" },
+    dA:"في التاسع من أبريل 1948، هاجمت قوات عصابتَي إيرغون وليهي الصهيونيتين قرية دير ياسين العربية قرب القدس. راح ضحية المجزرة ما بين 107 و120 فلسطينياً من بينهم نساء وأطفال وشيوخ. أسفر الهجوم عن موجات نزوح جماعي للفلسطينيين وكان من أبرز محفزات النكبة الفلسطينية. استُخدمت المجزرة وسيلة ترهيب لإجبار الفلسطينيين على الفرار من ديارهم.",
+    dE:"On April 9, 1948, Irgun and Lehi Zionist paramilitary forces attacked the Arab village of Deir Yassin near Jerusalem. Between 107 and 120 Palestinian villagers were killed, including women, children, and elderly. The attack triggered mass displacement and became a key catalyst of the Palestinian Nakba, used as psychological terror to drive Palestinians from their homes.",
+    sources:[
+      { title:"Wikipedia – Deir Yassin massacre", url:"https://en.wikipedia.org/wiki/Deir_Yassin_massacre" },
+      { title:"Institute for Palestine Studies", url:"https://www.palestine-studies.org" },
+      { title:"Human Rights Watch – Palestine Historical Archive", url:"https://www.hrw.org" }
+    ]
+  },
+  {
+    id:2, year:1948, date:"1948-10-29",
+    dd:{ ar:"29 أكتوبر 1948", en:"October 29, 1948" },
+    nA:"مجزرة الدوايمة", nE:"Al-Dawayima Massacre",
+    lA:"فلسطين - الخليل", lE:"Palestine – Hebron",
+    region:"middle-east", victims:200,
+    vN:{ ar:"80 إلى 200 قتيل", en:"80 to 200 killed" },
+    dA:"ارتكبت قوات لواء الثامن في الجيش الإسرائيلي مجزرةً في قرية الدوايمة بقضاء الخليل. قُتل ما بين 80 و200 مدني فلسطيني. تشير شهادات موثقة لجنود إسرائيليين إلى قتل الأطفال وتدمير المنازل. أُخفيت تفاصيل المجزرة لسنوات.",
+    dE:"The Israeli 8th Brigade committed a massacre in the village of Al-Dawayima in the Hebron district. Between 80 and 200 Palestinian civilians were killed. Documented testimonies from Israeli soldiers indicate the killing of children and destruction of homes. Details were suppressed for years.",
+    sources:[
+      { title:"Wikipedia – Al-Dawayima massacre", url:"https://en.wikipedia.org/wiki/Al-Dawayima_massacre" },
+      { title:"Benny Morris – The Birth of the Palestinian Refugee Problem Revisited", url:"https://en.wikipedia.org/wiki/The_Birth_of_the_Palestinian_Refugee_Problem_Revisited" }
+    ]
+  },
+  {
+    id:3, year:1956, date:"1956-10-29",
+    dd:{ ar:"29 أكتوبر 1956", en:"October 29, 1956" },
+    nA:"مجزرة كفر قاسم", nE:"Kafr Qasim Massacre",
+    lA:"فلسطين المحتلة - المثلث", lE:"Occupied Palestine – Triangle Region",
+    region:"middle-east", victims:49,
+    vN:{ ar:"49 قتيلاً مدنياً", en:"49 civilian deaths" },
+    dA:"في يوم العدوان الثلاثي على مصر، أطلقت قوات حرس الحدود الإسرائيلية النار على عمال فلسطينيين عائدين إلى قريتهم كفر قاسم غير مدركين لحظر التجوال المفروض. لقي 49 مدنياً حتفهم بينهم 17 امرأة و7 أطفال. حوكم المنفذون ثم أُفرج عنهم وسُرّحوا من الخدمة مع مكافآت.",
+    dE:"On the day of the Suez Crisis, Israeli border guards opened fire on Palestinian workers returning home unaware of the newly imposed curfew. 49 civilians were killed including 17 women and 7 children. Perpetrators were tried, then released within years and given bonuses upon discharge.",
+    sources:[
+      { title:"Wikipedia – Kafr Qasim massacre", url:"https://en.wikipedia.org/wiki/Kafr_Qasim_massacre" },
+      { title:"Adalah – The Legal Center for Arab Minority Rights", url:"https://www.adalah.org" }
+    ]
+  },
+  {
+    id:4, year:1965, date:"1965-10-01",
+    dd:{ ar:"1965–1966", en:"1965–1966" },
+    nA:"مجازر إندونيسيا 1965", nE:"Indonesian Mass Killings 1965–66",
+    lA:"إندونيسيا", lE:"Indonesia",
+    region:"southeast-asia", victims:750000,
+    vN:{ ar:"500,000 إلى مليون قتيل", en:"500,000 to 1 million killed" },
+    dA:"في أعقاب الانقلاب الفاشل في أكتوبر 1965، شنّ الجيش الإندونيسي بقيادة سوهارتو وميليشيات يمينية حملةً دموية ضد المشتبه في انتمائهم للحزب الشيوعي الإندونيسي وعائلاتهم، وكان كثير منهم مسلمين. أسفرت المجازر عن مقتل ما بين 500,000 ومليون شخص، وتُعدّ من أكثر حالات الإبادة الجماعية التي طويت تحت الصمت في القرن العشرين.",
+    dE:"Following Indonesia's failed 1965 coup, the Suharto-led military and right-wing militias launched a bloody campaign against suspected Indonesian Communist Party members, many of them Muslims. Between 500,000 and one million people were killed, making it one of the most silenced mass killings of the 20th century.",
+    sources:[
+      { title:"Wikipedia – Indonesian mass killings of 1965–66", url:"https://en.wikipedia.org/wiki/Indonesian_mass_killings_of_1965%E2%80%9366" },
+      { title:"Human Rights Watch – Indonesia: Accounting for Past Abuses", url:"https://www.hrw.org" },
+      { title:"The Act of Killing – Documentary (2012)", url:"https://en.wikipedia.org/wiki/The_Act_of_Killing" }
+    ]
+  },
+  {
+    id:5, year:1982, date:"1982-02-02",
+    dd:{ ar:"فبراير 1982", en:"February 1982" },
+    nA:"مجزرة حماة", nE:"Hama Massacre",
+    lA:"سوريا - حماة", lE:"Syria – Hama",
+    region:"middle-east", victims:25000,
+    vN:{ ar:"10,000 إلى 40,000 قتيل", en:"10,000 to 40,000 killed" },
+    dA:"في فبراير 1982، أطلق النظام السوري بقيادة حافظ الأسد حملة عسكرية واسعة على مدينة حماة لإخماد انتفاضة الإخوان المسلمين. استمر القصف الوحشي أربعة أسابيع وأسفر عن مقتل ما بين 10,000 و40,000 مدني. دُمّرت أجزاء واسعة من المدينة وفقد عشرات الآلاف منازلهم. تُعدّ من أبشع عمليات القمع في تاريخ الشرق الأوسط الحديث.",
+    dE:"In February 1982, the Syrian regime under Hafez al-Assad launched a massive military campaign on Hama to suppress a Muslim Brotherhood uprising. Four weeks of brutal bombardment killed between 10,000 and 40,000 civilians. Large parts of the ancient city were destroyed and tens of thousands lost their homes. It remains one of the most brutal acts of repression in modern Middle Eastern history.",
+    sources:[
+      { title:"Wikipedia – Hama massacre", url:"https://en.wikipedia.org/wiki/Hama_massacre" },
+      { title:"Human Rights Watch – Syria: The Silenced Kurds", url:"https://www.hrw.org/legacy/reports/1996/Syria.htm" },
+      { title:"Amnesty International – Syria Report 1983", url:"https://www.amnesty.org" }
+    ]
+  },
+  {
+    id:6, year:1982, date:"1982-09-16",
+    dd:{ ar:"16–18 سبتمبر 1982", en:"September 16–18, 1982" },
+    nA:"مجزرة صبرا وشاتيلا", nE:"Sabra and Shatila Massacre",
+    lA:"لبنان - بيروت", lE:"Lebanon – Beirut",
+    region:"middle-east", victims:3500,
+    vN:{ ar:"800 إلى 3,500 قتيل", en:"800 to 3,500 killed" },
+    dA:"بين 16 و18 سبتمبر 1982، نفّذت ميليشيات الكتائب اللبنانية مجزرةً مروعة في مخيمَي صبرا وشاتيلا في بيروت الغربية. كانت القوات الإسرائيلية بقيادة أرييل شارون تحاصر المخيمات وأضاءت سماءها بالقنابل المضيئة مما سهّل تنفيذ المجزرة. راح ضحيتها 800 إلى 3,500 شخص بينهم نساء وأطفال وشيوخ. خلصت لجنة كاهان الإسرائيلية إلى المسؤولية غير المباشرة لإسرائيل. وصفت الأمم المتحدة الجريمة بالإبادة الجماعية.",
+    dE:"Between September 16–18, 1982, Lebanese Phalangist militias carried out a horrific massacre in the Palestinian refugee camps of Sabra and Shatila. Israeli forces under Ariel Sharon surrounded the camps and lit the sky with flares. Between 800 and 3,500 died, including women, children, and elderly. Israel's Kahan Commission found indirect Israeli responsibility. The UN described it as genocide.",
+    sources:[
+      { title:"Wikipedia – Sabra and Shatila massacre", url:"https://en.wikipedia.org/wiki/Sabra_and_Shatila_massacre" },
+      { title:"UN General Assembly Resolution 37/123", url:"https://www.un.org" },
+      { title:"Kahan Commission Report", url:"https://en.wikipedia.org/wiki/Kahan_Commission" }
+    ]
+  },
+  {
+    id:7, year:1988, date:"1988-03-16",
+    dd:{ ar:"16–19 مارس 1988", en:"March 16–19, 1988" },
+    nA:"مجزرة حلبجة الكيميائية", nE:"Halabja Chemical Massacre",
+    lA:"العراق - كردستان", lE:"Iraq – Kurdistan",
+    region:"middle-east", victims:5000,
+    vN:{ ar:"3,200 إلى 5,000 قتيل فورياً", en:"3,200 to 5,000 immediate deaths" },
+    dA:"في مارس 1988، شنّ النظام العراقي بقيادة صدام حسين هجوماً كيميائياً على مدينة حلبجة الكردية باستخدام غازات الأعصاب والخردل. لقي 3,200 إلى 5,000 مدني حتفهم فورياً، وعانى الآلاف من إصابات دائمة وأمراض سرطانية وعيوب خلقية في الأجيال التالية. يُعدّ الأكبر من نوعه في التاريخ ضد مدنيين.",
+    dE:"In March 1988, Saddam Hussein's Iraqi regime launched a chemical weapons attack on the Kurdish city of Halabja using nerve agents and mustard gas. Between 3,200 and 5,000 civilians died immediately, while thousands suffered permanent injuries and subsequent generations faced cancers and birth defects. It remains the largest chemical weapons attack against civilians in history.",
+    sources:[
+      { title:"Wikipedia – Halabja massacre", url:"https://en.wikipedia.org/wiki/Halabja_massacre" },
+      { title:"Human Rights Watch – Genocide in Iraq: The Anfal Campaign", url:"https://www.hrw.org/reports/1993/iraqanfal/" },
+      { title:"United Nations – Report on Chemical Weapons Use", url:"https://www.un.org" }
+    ]
+  },
+  {
+    id:8, year:1992, date:"1992-02-26",
+    dd:{ ar:"26 فبراير 1992", en:"February 26, 1992" },
+    nA:"مجزرة خوجالي", nE:"Khojaly Massacre",
+    lA:"أذربيجان - ناغورنو كاراباخ", lE:"Azerbaijan – Nagorno-Karabakh",
+    region:"caucasus", victims:613,
+    vN:{ ar:"613 قتيلاً مؤكداً", en:"613 confirmed killed" },
+    dA:"في الساعات الأولى من 26 فبراير 1992، هاجمت القوات الأرمنية بمساعدة لواء من الجيش السوفيتي الرابع مدينة خوجالي الأذربيجانية. لقي 613 مدنياً مسلماً حتفهم وجُرح مئات، وأُسر نحو 1,275 شخصاً. اعترفت برلمانات عدة دول بالمجزرة بوصفها إبادة جماعية.",
+    dE:"In the early hours of February 26, 1992, Armenian forces aided by a Soviet regiment attacked the Azerbaijani town of Khojaly. 613 Azerbaijani Muslim civilians were killed, hundreds wounded, and approximately 1,275 taken prisoner. Multiple national parliaments have recognized the massacre as genocide.",
+    sources:[
+      { title:"Wikipedia – Khojaly massacre", url:"https://en.wikipedia.org/wiki/Khojaly_massacre" },
+      { title:"Human Rights Watch – Bloodshed in the Caucasus", url:"https://www.hrw.org/reports/1992/AZERB926.htm" },
+      { title:"Amnesty International – Azerbaijan/Nagorno-Karabakh", url:"https://www.amnesty.org" }
+    ]
+  },
+  {
+    id:9, year:1992, date:"1992-12-06",
+    dd:{ ar:"ديسمبر 1992 – يناير 1993", en:"December 1992 – January 1993" },
+    nA:"أحداث هدم مسجد بابري", nE:"Babri Masjid Demolition Riots",
+    lA:"الهند - أيوديا وعدة مدن", lE:"India – Ayodhya & multiple cities",
+    region:"south-asia", victims:2000,
+    vN:{ ar:"نحو 2,000 قتيل", en:"Approximately 2,000 killed" },
+    dA:"في 6 ديسمبر 1992، هدمت حشود متعصبة هندوسية مسجد بابري التاريخي في أيوديا. أشعل الهدم موجة أعمال شغب طائفية راح ضحيتها نحو 2,000 شخص معظمهم مسلمون في مومباي وسورات وعدة مدن. أسفر الحادث عن نزوح طائفي وأضرار اقتصادية فادحة بالأقلية المسلمة.",
+    dE:"On December 6, 1992, Hindu extremist mobs demolished the 16th-century Babri Masjid in Ayodhya. The demolition sparked communal riots killing approximately 2,000 people, mostly Muslims, in Mumbai, Surat, and other cities. The incident caused mass sectarian displacement and severe economic damage to the Muslim minority.",
+    sources:[
+      { title:"Wikipedia – Demolition of the Babri Masjid", url:"https://en.wikipedia.org/wiki/Demolition_of_the_Babri_Masjid" },
+      { title:"Human Rights Watch – India: Communal Violence and the Denial of Justice", url:"https://www.hrw.org/reports/1996/India.htm" },
+      { title:"The Srikrishna Commission Report", url:"https://en.wikipedia.org/wiki/Srikrishna_Commission" }
+    ]
+  },
+  {
+    id:10, year:1992, date:"1992-04-05",
+    dd:{ ar:"1992–1995", en:"1992–1995" },
+    nA:"إبادة مسلمي البوسنة", nE:"Bosnian Muslim Genocide",
+    lA:"البوسنة والهرسك", lE:"Bosnia and Herzegovina",
+    region:"balkans", victims:100000,
+    vN:{ ar:"أكثر من 100,000 قتيل", en:"Over 100,000 killed" },
+    dA:"خلال الحرب البوسنية (1992–1995)، تعرّض المسلمون البوشناق لإبادة ممنهجة نفّذتها القوات الصربية شملت المجازر الجماعية والاغتصاب المنهجي والتطهير العرقي وتدمير المساجد والمقابر. لقي أكثر من 100,000 شخص حتفهم ونزح نحو مليونَي شخص. وثّقت المحكمة الجنائية الدولية ليوغوسلافيا السابقة الجرائم وأصدرت أحكاماً بحق القادة.",
+    dE:"During the Bosnian War (1992–1995), Bosniak Muslims suffered a systematic genocide by Serbian forces, encompassing mass massacres, systematic rape, ethnic cleansing, and destruction of mosques and cemeteries. Over 100,000 were killed and approximately two million displaced. The ICTY documented the crimes and convicted numerous military and political leaders.",
+    sources:[
+      { title:"Wikipedia – Bosnian genocide", url:"https://en.wikipedia.org/wiki/Bosnian_genocide" },
+      { title:"ICTY – Completed Cases", url:"https://www.icty.org/en/cases/completed-cases" },
+      { title:"Human Rights Watch – Bosnia War Crimes", url:"https://www.hrw.org/topic/europe/central-asia/former-yugoslavia" }
+    ]
+  },
+  {
+    id:11, year:1994, date:"1994-02-25",
+    dd:{ ar:"25 فبراير 1994", en:"February 25, 1994" },
+    nA:"مجزرة الحرم الإبراهيمي", nE:"Cave of the Patriarchs Massacre",
+    lA:"فلسطين - الخليل", lE:"Palestine – Hebron",
+    region:"middle-east", victims:29,
+    vN:{ ar:"29 قتيلاً و125 جريحاً", en:"29 killed and 125 wounded" },
+    dA:"في صبيحة 25 فبراير 1994 خلال شهر رمضان، أطلق المستوطن الإسرائيلي المتطرف باروخ غولدشتاين النار على المصلين في المسجد الإبراهيمي بالخليل. استشهد 29 مسلماً وأُصيب أكثر من 125 آخرين قبل أن يُقتل المهاجم. أسفر الحادث عن موجة واسعة من الاضطرابات في المنطقة.",
+    dE:"On the morning of February 25, 1994, during Ramadan, Israeli settler extremist Baruch Goldstein opened fire on Muslim worshippers at the Cave of the Patriarchs in Hebron during Fajr prayer. 29 Muslims were killed and over 125 wounded before the attacker was killed. The incident triggered widespread regional unrest.",
+    sources:[
+      { title:"Wikipedia – Cave of the Patriarchs massacre", url:"https://en.wikipedia.org/wiki/Cave_of_the_Patriarchs_massacre" },
+      { title:"Human Rights Watch – Hebron: Massacre and Its Aftermath", url:"https://www.hrw.org/reports/1994/WR94/Middle2-06.htm" }
+    ]
+  },
+  {
+    id:12, year:1995, date:"1995-07-11",
+    dd:{ ar:"11–22 يوليو 1995", en:"July 11–22, 1995" },
+    nA:"مجزرة سريبرينيتشا", nE:"Srebrenica Massacre",
+    lA:"البوسنة والهرسك - سريبرينيتشا", lE:"Bosnia and Herzegovina – Srebrenica",
+    region:"balkans", victims:8372,
+    vN:{ ar:"8,372 قتيلاً مؤكداً", en:"8,372 confirmed killed" },
+    dA:"تُعدّ مجزرة سريبرينيتشا أكبر إبادة جماعية في أوروبا منذ الحرب العالمية الثانية. استولت قوات الجيش الصربي البوسني بقيادة راتكو ملاديتش على المنطقة الآمنة الأممية وأعدمت ما لا يقل عن 8,372 رجلاً وصبياً بوشنياقياً مسلماً. أُدين ملاديتش وكارادزيتش لاحقاً بتهمة الإبادة الجماعية.",
+    dE:"The Srebrenica massacre is the largest genocide in Europe since WWII. Bosnian Serb Army forces under General Ratko Mladić captured the UN safe area and executed at least 8,372 Bosniak Muslim men and boys. Both Mladić and Karadžić were later convicted of genocide by the ICTY.",
+    sources:[
+      { title:"Wikipedia – Srebrenica massacre", url:"https://en.wikipedia.org/wiki/Srebrenica_massacre" },
+      { title:"ICTY – Judgement in the Case of Radislav Krstić", url:"https://www.icty.org/case/krstic/4" },
+      { title:"UN Report – Fall of Srebrenica (A/54/549)", url:"https://www.un.org/en/ga/search/view_doc.asp?symbol=A/54/549" },
+      { title:"Human Rights Watch – Srebrenica: A Safe Area", url:"https://www.hrw.org/report/1995/10/15/srebrenica-safe-area" }
+    ]
+  },
+  {
+    id:13, year:1996, date:"1996-04-18",
+    dd:{ ar:"18 أبريل 1996", en:"April 18, 1996" },
+    nA:"مجزرة قانا الأولى", nE:"First Qana Massacre",
+    lA:"لبنان - قانا", lE:"Lebanon – Qana",
+    region:"middle-east", victims:106,
+    vN:{ ar:"106 قتيلاً من المدنيين", en:"106 civilian refugees killed" },
+    dA:"خلال عملية عناقيد الغضب الإسرائيلية، قصفت قوات الجيش الإسرائيلي قاعدة اليونيفيل في قانا الجنوبية حيث كان يحتمي أكثر من 800 مدني. استشهد 106 أشخاص وأُصيب 116 آخرون. وصف تقرير أممي القصف بأنه متعمد.",
+    dE:"During Operation Grapes of Wrath, Israeli forces shelled a UNIFIL base in southern Qana sheltering over 800 civilians. 106 were killed and 116 injured. A UN report described the shelling as deliberate. Shocking images of the victims shook global public opinion.",
+    sources:[
+      { title:"Wikipedia – Qana massacre (1996)", url:"https://en.wikipedia.org/wiki/Qana_massacre_(1996)" },
+      { title:"UN Report on the Qana Incident", url:"https://www.un.org/Depts/dpko/missions/unifil/" },
+      { title:"Human Rights Watch – Civilian Pawns", url:"https://www.hrw.org/reports/1996/Israel.htm" }
+    ]
+  },
+  {
+    id:14, year:1999, date:"1999-10-01",
+    dd:{ ar:"أكتوبر 1999 – مايو 2000", en:"October 1999 – May 2000" },
+    nA:"قصف غروزني – الحرب الشيشانية الثانية", nE:"Grozny Bombardment – Second Chechen War",
+    lA:"روسيا - الشيشان", lE:"Russia – Chechnya",
+    region:"caucasus", victims:25000,
+    vN:{ ar:"عشرات الآلاف من المدنيين", en:"Tens of thousands of civilians" },
+    dA:"مع اندلاع الحرب الشيشانية الثانية، شنّت القوات الروسية قصفاً مكثفاً على غروزني وصفها محققو الأمم المتحدة بأنها «أكثر مدينة مدمّرة على وجه الأرض». لقي عشرات الآلاف من المسلمين حتفهم ونزح أكثر من 200,000 شخص.",
+    dE:"With the Second Chechen War, Russian forces launched intensive bombardment of Grozny, which UN investigators called 'the most destroyed city on Earth.' Tens of thousands of Muslim civilians were killed, and over 200,000 were displaced. Human Rights Watch documented serious violations of international humanitarian law.",
+    sources:[
+      { title:"Wikipedia – Second Chechen War", url:"https://en.wikipedia.org/wiki/Second_Chechen_War" },
+      { title:"Human Rights Watch – Welcome to Hell: Torture and Extrajudicial Execution in Chechnya", url:"https://www.hrw.org/report/2000/10/01/welcome-hell" },
+      { title:"Amnesty International – Chechnya", url:"https://www.amnesty.org" }
+    ]
+  },
+  {
+    id:15, year:2002, date:"2002-02-27",
+    dd:{ ar:"فبراير–مارس 2002", en:"February–March 2002" },
+    nA:"مجازر غوجارات", nE:"Gujarat Massacres",
+    lA:"الهند - غوجارات", lE:"India – Gujarat",
+    region:"south-asia", victims:2000,
+    vN:{ ar:"أكثر من 1,000 إلى 2,000 قتيل", en:"1,000 to 2,000 killed" },
+    dA:"في أعقاب حريق قطار غودهرا في 27 فبراير 2002، شنّ متطرفون هندوس هجمات منظمة على التجمعات السكانية المسلمة في غوجارات. استمر العنف ثلاثة أيام وأسفر عن مقتل 1,000 إلى 2,000 مسلم وتشريد أكثر من 150,000. وثّقت هيومن رايتس ووتش تقاعس الشرطة وتواطؤ مسؤولين حكوميين.",
+    dE:"Following the Godhra train fire on February 27, 2002, Hindu extremists launched organized attacks on Muslim communities in Gujarat. Three days of violence killed between 1,000 and 2,000 Muslims, displacing over 150,000. Human Rights Watch documented police inaction and government official complicity.",
+    sources:[
+      { title:"Wikipedia – 2002 Gujarat riots", url:"https://en.wikipedia.org/wiki/2002_Gujarat_riots" },
+      { title:"Human Rights Watch – 'We Have No Orders to Save You'", url:"https://www.hrw.org/report/2002/04/30/we-have-no-orders-save-you" },
+      { title:"Amnesty International – India: Gujarat: The Gathering Cloud", url:"https://www.amnesty.org" }
+    ]
+  },
+  {
+    id:16, year:2004, date:"2004-11-08",
+    dd:{ ar:"نوفمبر 2004", en:"November 2004" },
+    nA:"معركة الفلوجة الثانية", nE:"Second Battle of Fallujah",
+    lA:"العراق - الفلوجة", lE:"Iraq – Fallujah",
+    region:"middle-east", victims:800,
+    vN:{ ar:"مئات المدنيين ودمار واسع", en:"Hundreds of civilians, vast destruction" },
+    dA:"في نوفمبر 2004، شنّت القوات الأمريكية والعراقية عملية فانتوم فيوري على الفلوجة. تعرّضت المدينة لقصف مكثف أسفر عن مقتل مئات المدنيين ودمار 60% من المباني. وثّقت منظمات حقوق الإنسان استخدام الفسفور الأبيض في مناطق سكنية. أُفرغت المدينة من سكانها البالغ عددهم 300,000 نسمة.",
+    dE:"In November 2004, US and Iraqi forces launched Operation Phantom Fury on Fallujah. Intensive bombardment killed hundreds of civilians and destroyed 60% of buildings. Human rights organizations documented the use of white phosphorus in civilian areas. The city of 300,000 was nearly completely emptied of its residents.",
+    sources:[
+      { title:"Wikipedia – Second Battle of Fallujah", url:"https://en.wikipedia.org/wiki/Second_Battle_of_Fallujah" },
+      { title:"Human Rights Watch – No Blood, No Foul", url:"https://www.hrw.org/report/2006/07/23/no-blood-no-foul" },
+      { title:"Amnesty International – Iraq: Fallujah", url:"https://www.amnesty.org" }
+    ]
+  },
+  {
+    id:17, year:2006, date:"2006-07-30",
+    dd:{ ar:"30 يوليو 2006", en:"July 30, 2006" },
+    nA:"مجزرة قانا الثانية", nE:"Second Qana Massacre",
+    lA:"لبنان - قانا", lE:"Lebanon – Qana",
+    region:"middle-east", victims:28,
+    vN:{ ar:"28 قتيلاً – 16 طفلاً", en:"28 killed – 16 of them children" },
+    dA:"في 30 يوليو 2006 خلال حرب لبنان الثانية، قصفت طائرات إسرائيلية مبنى سكنياً في قانا يحتمي فيه مدنيون نازحون. استشهد 28 شخصاً بينهم 16 طفلاً. أثارت المجزرة إدانات دولية واسعة وطالبت دول كثيرة بوقف فوري لإطلاق النار.",
+    dE:"On July 30, 2006, during the Second Lebanon War, Israeli warplanes bombed a residential building in Qana sheltering displaced civilians. 28 were killed including 16 children. The massacre triggered widespread international condemnation and calls for an immediate ceasefire.",
+    sources:[
+      { title:"Wikipedia – Qana airstrike (2006)", url:"https://en.wikipedia.org/wiki/Qana_airstrike_(2006)" },
+      { title:"Human Rights Watch – Fatal Strikes: Israel's Indiscriminate Attacks", url:"https://www.hrw.org/report/2006/08/03/fatal-strikes" },
+      { title:"Amnesty International – Lebanon/Israel: Under Fire", url:"https://www.amnesty.org" }
+    ]
+  },
+  {
+    id:18, year:2008, date:"2008-12-27",
+    dd:{ ar:"ديسمبر 2008 – يناير 2009", en:"December 2008 – January 2009" },
+    nA:"عدوان إسرائيل على غزة – الرصاص المصبوب", nE:"Israeli Assault on Gaza – Operation Cast Lead",
+    lA:"فلسطين - غزة", lE:"Palestine – Gaza Strip",
+    region:"middle-east", victims:1417,
+    vN:{ ar:"1,417 قتيلاً فلسطينياً", en:"1,417 Palestinian deaths" },
+    dA:"استمر القصف الإسرائيلي على غزة 22 يوماً وأسفر عن استشهاد 1,417 فلسطينياً أكثر من ثلثهم مدنيون بينهم 318 طفلاً. وثّق تقرير غولدستون الأممي ارتكاب جرائم حرب محتملة.",
+    dE:"Israel's 22-day bombardment of Gaza killed 1,417 Palestinians — more than a third of them civilians including 318 children. The UN Goldstone Report documented possible war crimes by the Israeli side.",
+    sources:[
+      { title:"Wikipedia – Gaza War (2008–2009)", url:"https://en.wikipedia.org/wiki/Gaza_War_(2008%E2%80%932009)" },
+      { title:"UN Goldstone Report (A/HRC/12/48)", url:"https://www2.ohchr.org/english/bodies/hrcouncil/specialsession/9/FactFindingMission.htm" },
+      { title:"Human Rights Watch – Rain of Fire: White Phosphorus in Gaza", url:"https://www.hrw.org/report/2009/03/25/rain-fire/" }
+    ]
+  },
+  {
+    id:19, year:2012, date:"2012-08-25",
+    dd:{ ar:"أغسطس 2012", en:"August 2012" },
+    nA:"مجزرة داريا – سوريا", nE:"Daraya Massacre",
+    lA:"سوريا - داريا ريف دمشق", lE:"Syria – Daraya, Rural Damascus",
+    region:"middle-east", victims:700,
+    vN:{ ar:"245 إلى 700 قتيل", en:"245 to 700 killed" },
+    dA:"في أواخر أغسطس 2012، ارتكبت قوات النظام السوري مجزرةً في مدينة داريا بريف دمشق. لقي مئات المدنيين حتفهم في عملية تمشيط استمرت أياماً بإعدامات ميدانية. وثّقت هيومن رايتس ووتش الجريمة.",
+    dE:"In late August 2012, Syrian regime forces committed a massacre in Daraya, rural Damascus. Hundreds of civilians were killed during a multi-day sweeping operation with summary executions. Human Rights Watch documented the crime as a likely war crime.",
+    sources:[
+      { title:"Wikipedia – Daraya massacre", url:"https://en.wikipedia.org/wiki/Daraya_massacre" },
+      { title:"Human Rights Watch – Syria: Daraya: A Government Massacre", url:"https://www.hrw.org/report/2013/03/15/daraya/government-massacre" }
+    ]
+  },
+  {
+    id:20, year:2013, date:"2013-08-21",
+    dd:{ ar:"21 أغسطس 2013", en:"August 21, 2013" },
+    nA:"هجوم الغوطة الكيميائي", nE:"Ghouta Chemical Attack",
+    lA:"سوريا - الغوطة الشرقية", lE:"Syria – Eastern Ghouta",
+    region:"middle-east", victims:1429,
+    vN:{ ar:"281 إلى 1,729 قتيل", en:"281 to 1,729 killed" },
+    dA:"في 21 أغسطس 2013، شنّ النظام السوري هجوماً بغاز السارين على الغوطة الشرقية قرب دمشق. قُدّر الضحايا بأكثر من 1,400 شخص معظمهم مدنيون. أكدت لجنة تحقيق الأمم المتحدة ومنظمة حظر الأسلحة الكيميائية استخدام أسلحة كيميائية. يُعدّ الهجوم الأكثر دموية بالأسلحة الكيميائية منذ حلبجة.",
+    dE:"On August 21, 2013, the Syrian regime launched a sarin gas attack on Eastern Ghouta near Damascus. Initial estimates exceeded 1,400 casualties, mostly civilians. Both the UN investigation commission and OPCW confirmed chemical weapons use. The attack is the deadliest chemical weapons attack since Halabja.",
+    sources:[
+      { title:"Wikipedia – Ghouta chemical attack", url:"https://en.wikipedia.org/wiki/Ghouta_chemical_attack" },
+      { title:"UN Report on Ghouta (A/HRC/24/46)", url:"https://www.ohchr.org/EN/HRBodies/HRC/IICISyria/Pages/Documentation.aspx" },
+      { title:"Human Rights Watch – Attacks on Ghouta", url:"https://www.hrw.org/report/2013/09/10/attacks-ghouta" }
+    ]
+  },
+  {
+    id:21, year:2014, date:"2014-07-08",
+    dd:{ ar:"يوليو–أغسطس 2014", en:"July–August 2014" },
+    nA:"عدوان إسرائيل على غزة – الجرف الصامد", nE:"Israeli Assault on Gaza – Operation Protective Edge",
+    lA:"فلسطين - غزة", lE:"Palestine – Gaza Strip",
+    region:"middle-east", victims:2251,
+    vN:{ ar:"2,251 قتيلاً فلسطينياً", en:"2,251 Palestinian deaths" },
+    dA:"استمر العدوان الإسرائيلي على غزة 51 يوماً وأسفر عن استشهاد 2,251 فلسطينياً منهم 1,462 مدنياً و551 طفلاً. دُمّر 18,000 مسكن كلياً أو جزئياً وشُرّد أكثر من 500,000 شخص. وثّق التقرير الأممي انتهاكات جسيمة للقانون الإنساني الدولي.",
+    dE:"The 51-day Israeli assault on Gaza killed 2,251 Palestinians, including 1,462 civilians and 551 children. 18,000 homes were fully or partially destroyed and over 500,000 were displaced. The UN report documented serious violations of international humanitarian law including targeting of schools and hospitals.",
+    sources:[
+      { title:"Wikipedia – 2014 Gaza War", url:"https://en.wikipedia.org/wiki/2014_Gaza_War" },
+      { title:"UN Human Rights Report on Operation Protective Edge", url:"https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-conflict/report-co-i-gaza" },
+      { title:"UNICEF – Gaza Crisis Report 2014", url:"https://www.unicef.org/infobycountry/oPt_76562.html" }
+    ]
+  },
+  {
+    id:22, year:2015, date:"2015-10-03",
+    dd:{ ar:"3 أكتوبر 2015", en:"October 3, 2015" },
+    nA:"قصف مستشفى كوندوز", nE:"Kunduz Hospital Airstrike",
+    lA:"أفغانستان - كوندوز", lE:"Afghanistan – Kunduz",
+    region:"south-asia", victims:42,
+    vN:{ ar:"42 قتيلاً من أطباء ومرضى", en:"42 doctors and patients killed" },
+    dA:"في الساعة الثانية فجراً من 3 أكتوبر 2015، قصفت قوة أمريكية مستشفى أطباء بلا حدود في كوندوز المستشفى الوحيد في المنطقة. استشهد 42 شخصاً بين طاقم طبي ومرضى. استمر القصف 68 دقيقة رغم إبلاغ المنظمة السلطات الأمريكية بالإحداثيات. وصفت المنظمة الجريمة بأنها إبادة متعمدة لمرفق طبي محمي.",
+    dE:"At 2 AM on October 3, 2015, a US airstrike bombed the MSF hospital in Kunduz — the only hospital serving hundreds of thousands. 42 people were killed including medical staff and patients. Bombardment continued 68 minutes despite MSF informing US authorities of the coordinates. MSF called it deliberate destruction of a protected medical facility.",
+    sources:[
+      { title:"Wikipedia – Kunduz hospital airstrike", url:"https://en.wikipedia.org/wiki/Kunduz_hospital_airstrike" },
+      { title:"MSF – Demands Independent Investigation After Kunduz Hospital Bombing", url:"https://www.msf.org/kunduz-hospital-attack-investigation" },
+      { title:"Human Rights Watch – Afghanistan: Pentagon Report on Hospital Attack", url:"https://www.hrw.org/news/2015/11/04/afghanistan-pentagon-report-hospital-attack-falls-short" }
+    ]
+  },
+  {
+    id:23, year:2017, date:"2017-08-25",
+    dd:{ ar:"أغسطس 2017 – مستمر", en:"August 2017 – ongoing" },
+    nA:"إبادة الروهينغا – ميانمار", nE:"Rohingya Genocide – Myanmar",
+    lA:"ميانمار - راخين", lE:"Myanmar – Rakhine State",
+    region:"southeast-asia", victims:25000,
+    vN:{ ar:"10,000–25,000 قتيل على الأقل", en:"At least 10,000–25,000 killed" },
+    dA:"في أغسطس 2017، شنّ جيش ميانمار والميليشيات البوذية حملةً ضد مسلمي الروهينغا وصفها تحقيق أممي بأنها «مثال كتابي على الإبادة الجماعية». لقي 10,000–25,000 شخص حتفهم، وفرّ أكثر من 700,000 إلى بنغلاديش. وثّقت التقارير اغتصاباً جماعياً وحرق قرى وإعداماً للأطفال. أحالت محكمة العدل الدولية القضية للتحقيق بتهمة الإبادة الجماعية.",
+    dE:"In August 2017, Myanmar's military and Buddhist militias launched a campaign against Rohingya Muslims described by a UN investigation as 'a textbook example of genocide.' Between 10,000 and 25,000 were killed; over 700,000 fled to Bangladesh. Reports documented mass rape, village burning, and child executions. The ICJ referred Myanmar for investigation on genocide charges.",
+    sources:[
+      { title:"Wikipedia – Rohingya genocide", url:"https://en.wikipedia.org/wiki/Rohingya_genocide" },
+      { title:"UN Fact-Finding Mission on Myanmar (A/HRC/39/64)", url:"https://www.ohchr.org/en/hr-bodies/hrc/myanmar-ffm/report" },
+      { title:"Human Rights Watch – Burma: Military Commits Crimes Against Humanity", url:"https://www.hrw.org/news/2017/09/25/burma-military-commits-crimes-against-humanity" },
+      { title:"Amnesty International – 'We Will Destroy Everything'", url:"https://www.amnesty.org/en/documents/asa16/6976/2017/en/" }
+    ]
+  },
+  {
+    id:24, year:2017, date:"2017-01-01",
+    dd:{ ar:"2017 – مستمر", en:"2017 – ongoing" },
+    nA:"اضطهاد الإيغور – الصين", nE:"Uyghur Persecution – China",
+    lA:"الصين - شينجيانغ", lE:"China – Xinjiang",
+    region:"central-asia", victims:0,
+    vN:{ ar:"أكثر من مليون معتقل", en:"Over 1 million detained" },
+    dA:"منذ 2017، تنفّذ الصين حملة اعتقال جماعي وقمع ممنهج ضد أبناء الأقلية الإيغورية المسلمة في شينجيانغ. احتُجز أكثر من مليون شخص في معسكرات سُمّيت «مراكز التعليم المهني». وثّقت التقارير التعقيم القسري وتدمير المساجد ومراقبة السكان وفصل الأطفال عن ذويهم. صنّف الكونغرس الأمريكي وبرلمانات أوروبية هذه الأحداث إبادةً جماعية.",
+    dE:"Since 2017, China has implemented mass detention and systematic oppression against the Muslim Uyghur minority in Xinjiang. Over one million have been detained in camps called 'Vocational Education Centers.' Reports document forced sterilizations, mosque destruction, population surveillance, and family separations. The US Congress and several European parliaments have classified these events as genocide.",
+    sources:[
+      { title:"Wikipedia – Xinjiang internment camps", url:"https://en.wikipedia.org/wiki/Xinjiang_internment_camps" },
+      { title:"Human Rights Watch – Break Their Lineage, Break Their Roots", url:"https://www.hrw.org/report/2021/04/19/break-their-lineage-break-their-roots" },
+      { title:"Amnesty International – China: Crimes Against Humanity in Xinjiang", url:"https://www.amnesty.org/en/documents/asa17/4137/2021/en/" },
+      { title:"UN OHCHR – Assessment of Human Rights Concerns in Xinjiang", url:"https://www.ohchr.org/sites/default/files/documents/countries/2022-08-31/22-08-31-final-assesment.pdf" }
+    ]
+  },
+  {
+    id:25, year:2019, date:"2019-03-15",
+    dd:{ ar:"15 مارس 2019", en:"March 15, 2019" },
+    nA:"مجزرة مسجدَي كرايستشيرش", nE:"Christchurch Mosque Shootings",
+    lA:"نيوزيلندا - كرايستشيرش", lE:"New Zealand – Christchurch",
+    region:"europe", victims:51,
+    vN:{ ar:"51 قتيلاً و40 جريحاً", en:"51 killed and 40 wounded" },
+    dA:"في 15 مارس 2019، هاجم مسلح أسترالي متطرف أبيضوي مسجدَي النور وليندوود في كرايستشيرش خلال صلاة الجمعة. استشهد 51 مصلياً وجُرح أكثر من 40. بثّ المهاجم جريمته مباشرة عبر الإنترنت. صدر بحقه حكم بالسجن المؤبد دون إفراج مبكر. شكّلت صدمة وطنية عميقة في نيوزيلندا.",
+    dE:"On March 15, 2019, an Australian white supremacist attacked Al Noor and Linwood mosques in Christchurch during Friday prayers. 51 worshippers were killed and over 40 wounded. The attacker livestreamed his crime. He received life imprisonment without parole. The massacre was a profound national trauma for New Zealand.",
+    sources:[
+      { title:"Wikipedia – Christchurch mosque shootings", url:"https://en.wikipedia.org/wiki/Christchurch_mosque_shootings" },
+      { title:"Royal Commission of Inquiry into the Terrorist Attack", url:"https://christchurchattack.royalcommission.nz/" },
+      { title:"Human Rights Watch – New Zealand: Massacre Exposes White Supremacist Terror", url:"https://www.hrw.org/news/2019/03/15/new-zealand-massacre-exposes-white-supremacist-terror" }
+    ]
+  },
+  {
+    id:26, year:2021, date:"2021-05-10",
+    dd:{ ar:"مايو 2021", en:"May 2021" },
+    nA:"عدوان إسرائيل على غزة – سيف القدس", nE:"Israeli Assault on Gaza – Operation Guardian of the Walls",
+    lA:"فلسطين - غزة", lE:"Palestine – Gaza Strip",
+    region:"middle-east", victims:256,
+    vN:{ ar:"256 قتيلاً فلسطينياً", en:"256 Palestinian deaths" },
+    dA:"استمر العدوان الإسرائيلي 11 يوماً وأسفر عن استشهاد 256 فلسطينياً بينهم 66 طفلاً وإصابة أكثر من 1,900. دُمّر 1,800 وحدة سكنية. اشتعلت شرارة الأزمة من اعتداءات المستوطنين في الشيخ جراح والاعتداءات على المسجد الأقصى.",
+    dE:"The 11-day Israeli assault killed 256 Palestinians including 66 children, injuring over 1,900. 1,800 residential units were destroyed. The crisis was sparked by settler assaults in Sheikh Jarrah and attacks on Al-Aqsa Mosque.",
+    sources:[
+      { title:"Wikipedia – 2021 Israel–Palestine crisis", url:"https://en.wikipedia.org/wiki/2021_Israel%E2%80%93Palestine_crisis" },
+      { title:"OCHA – Gaza Humanitarian Situation Report", url:"https://www.ochaopt.org" },
+      { title:"Human Rights Watch – Gaza: Israel's Escalation", url:"https://www.hrw.org/news/2021/05/13/israel-gaza-conflict" }
+    ]
+  },
+  {
+    id:27, year:2022, date:"2022-01-01",
+    dd:{ ar:"2013 – مستمر", en:"2013 – ongoing" },
+    nA:"العنف الطائفي ضد المسلمين في أفريقيا الوسطى", nE:"Anti-Muslim Violence in Central African Republic",
+    lA:"جمهورية أفريقيا الوسطى", lE:"Central African Republic",
+    region:"africa", victims:5000,
+    vN:{ ar:"آلاف القتلى منذ 2013", en:"Thousands killed since 2013" },
+    dA:"منذ الأزمة السياسية 2013، يتعرّض مسلمو أفريقيا الوسطى لعنف طائفي منظم على أيدي ميليشيات أنتي بالاكا. طُردت الأقلية المسلمة التي كانت 15% من السكان من معظم المناطق الجنوبية والغربية. دُمّرت المساجد والمنازل ووُثّقت إعدامات جماعية. نزح أكثر من 400,000 مسلم قسراً.",
+    dE:"Since the 2013 crisis, Central African Republic Muslims face organized sectarian violence by Anti-Balaka militias. The Muslim minority — once 15% of the population — was expelled from most southern and western regions. Mosques and homes were destroyed, mass executions documented, and over 400,000 Muslims were forcibly displaced.",
+    sources:[
+      { title:"Wikipedia – Central African Republic conflict (2012–present)", url:"https://en.wikipedia.org/wiki/Central_African_Republic_conflict_(2012%E2%80%93present)" },
+      { title:"Human Rights Watch – Central African Republic: Anti-Balaka Sectarian Violence", url:"https://www.hrw.org/report/2014/02/12/central-african-republic/anti-balaka-sectarian-violence" },
+      { title:"Amnesty International – Ethnic Cleansing and Sectarian Killings", url:"https://www.amnesty.org/en/documents/afr19/004/2014/en/" }
+    ]
+  },
+  {
+    id:28, year:2023, date:"2023-10-07",
+    dd:{ ar:"أكتوبر 2023 – مستمر", en:"October 2023 – ongoing" },
+    nA:"الإبادة الجماعية الإسرائيلية في غزة", nE:"Israeli Genocide in Gaza",
+    lA:"فلسطين - قطاع غزة", lE:"Palestine – Gaza Strip",
+    region:"middle-east", victims:50000,
+    vN:{ ar:"أكثر من 50,000 شهيد (حتى 2025)", en:"Over 50,000 martyrs (as of 2025)" },
+    dA:"منذ أكتوبر 2023، تشنّ إسرائيل عدواناً متواصلاً على غزة وصفه مسؤولو الأمم المتحدة ومنظمات حقوق الإنسان بالإبادة الجماعية. تجاوز عدد الشهداء 50,000 شخص بنهاية 2024 يزيد نصفهم على أطفال ونساء. دُمّر أكثر من 70% من مباني القطاع وانهار النظام الصحي. رفعت جنوب أفريقيا دعوى إبادة جماعية أمام محكمة العدل الدولية التي أصدرت تدابير مؤقتة.",
+    dE:"Since October 2023, Israel has waged a continuous assault on Gaza described by UN officials and international human rights organizations as genocide. The death toll exceeded 50,000 by end of 2024, more than half women and children. Over 70% of buildings were destroyed and the healthcare system collapsed entirely. South Africa filed genocide charges at the ICJ, which issued provisional measures.",
+    sources:[
+      { title:"Wikipedia – 2023 Israel–Hamas war", url:"https://en.wikipedia.org/wiki/2023_Israel%E2%80%93Hamas_war" },
+      { title:"ICJ – Case Concerning Application of the Genocide Convention", url:"https://www.icj-cij.org/case/192" },
+      { title:"UN OCHA – Gaza Humanitarian Situation Reports", url:"https://www.ochaopt.org/situation_reports" },
+      { title:"Human Rights Watch – Gaza: Unlawful Israeli Attacks", url:"https://www.hrw.org/topic/middle-east-n-africa/israel/palestine" },
+      { title:"Amnesty International – New Evidence of Genocide Against Palestinians", url:"https://www.amnesty.org/en/latest/news/2024/12/israel-opt-new-evidence-of-genocide-against-palestinians-in-gaza/" }
+    ]
+  }
+];
+
+let lang = localStorage.getItem("enc-lang") || "ar";
+let theme = localStorage.getItem("enc-theme") || "dark";
+let region = "all";
+let sort = "date-desc";
+let view = "grid";
+let query = "";
+let dailyFetched = false;
+let dailyCount = parseInt(localStorage.getItem("enc-daily-count") || "0");
+
+function applyLang() {
+  const isAr = lang === "ar";
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isAr ? "rtl" : "ltr";
+  document.body.dataset.lang = lang;
+  document.querySelectorAll("[data-ar][data-en]").forEach(el => {
+    el.textContent = isAr ? el.dataset.ar : el.dataset.en;
+  });
+  document.getElementById("searchInput").placeholder = isAr
+    ? "ابحث عن حدث، موقع، أو تاريخ..."
+    : "Search for an event, location, or date...";
+  document.getElementById("langBtn").textContent = isAr ? "EN" : "عر";
+  document.getElementById("liveLbl").textContent = isAr ? "مباشر" : "LIVE";
+  document.getElementById("modalSrcsTitle").textContent = isAr ? "المصادر والمراجع" : "Sources & References";
+  document.querySelectorAll(".chip[data-ar][data-en]").forEach(el => {
+    el.textContent = lang === "ar" ? el.dataset.ar : el.dataset.en;
+  });
+  document.querySelectorAll(".fl-sort option[data-ar][data-en]").forEach(el => {
+    el.textContent = lang === "ar" ? el.dataset.ar : el.dataset.en;
+  });
+  updateDailyDatePill();
+  renderGrid();
+}
+
+function applyTheme() {
+  document.body.dataset.theme = theme;
+  document.getElementById("themeBtn").textContent = theme === "dark" ? "☀️" : "🌙";
+}
+
+function updateDailyDatePill() {
+  const now = new Date();
+  const opts = { year: "numeric", month: "long", day: "numeric" };
+  const locale = lang === "ar" ? "ar-EG" : "en-GB";
+  document.getElementById("dailyDatePill").textContent = now.toLocaleDateString(locale, opts);
+}
+
+function getFiltered() {
+  let arr = [...DB];
+  if (region !== "all") arr = arr.filter(e => e.region === region);
+  if (query) {
+    const q = query.toLowerCase();
+    arr = arr.filter(e =>
+      e.nA.includes(query) || e.nE.toLowerCase().includes(q) ||
+      e.lA.includes(query) || e.lE.toLowerCase().includes(q) ||
+      String(e.year).includes(q)
+    );
+  }
+  if (sort === "date-desc") arr.sort((a, b) => b.year - a.year);
+  else if (sort === "date-asc") arr.sort((a, b) => a.year - b.year);
+  else if (sort === "victims-desc") arr.sort((a, b) => b.victims - a.victims);
+  else arr.sort((a, b) => {
+    const na = lang === "ar" ? a.nA : a.nE;
+    const nb = lang === "ar" ? b.nA : b.nE;
+    return na.localeCompare(nb, lang === "ar" ? "ar" : "en");
+  });
+  return arr;
+}
+
+function buildSourcesHTML(sources) {
+  return sources.map(s =>
+    `<div class="src-row"><div class="src-dot"></div><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.title}</a></div>`
+  ).join("");
+}
+
+function renderGrid() {
+  const arr = getFiltered();
+  const container = document.getElementById("eventsGrid");
+  document.getElementById("resNum").textContent = arr.length;
+  document.getElementById("archBadge").textContent = arr.length;
+  container.innerHTML = "";
+
+  if (!arr.length) {
+    container.innerHTML = `<div class="no-results"><div class="no-results-ico">🔍</div><strong>${lang === "ar" ? "لا توجد نتائج مطابقة" : "No matching results"}</strong><p style="font-size:.82rem;margin-top:.4rem;color:var(--t3)">${lang === "ar" ? "حاول تغيير معايير البحث أو الفلتر" : "Try changing the search or filter criteria"}</p></div>`;
+    return;
+  }
+
+  arr.forEach((ev, i) => {
+    const name = lang === "ar" ? ev.nA : ev.nE;
+    const loc = lang === "ar" ? ev.lA : ev.lE;
+    const desc = lang === "ar" ? ev.dA : ev.dE;
+    const date = ev.dd[lang];
+    const regionName = REGIONS[ev.region] ? REGIONS[ev.region][lang] : ev.region;
+    const readMore = lang === "ar" ? "اقرأ المزيد" : "Read more";
+    const readLess = lang === "ar" ? "إخفاء" : "Collapse";
+    const srcsTitle = lang === "ar" ? "المصادر والمراجع" : "Sources & References";
+
+    const card = document.createElement("div");
+    card.className = "ecard";
+    card.style.animationDelay = `${Math.min(i, 12) * 0.035}s`;
+    card.setAttribute("role", "listitem");
+    card.innerHTML = `
+      <div class="ecard-head">
+        <div class="ecard-meta">
+          <span class="ecard-date">${date}</span>
+          <span class="ecard-rtag">📍 ${regionName}</span>
+        </div>
+      </div>
+      <div class="ecard-body">
+        <h3 class="ecard-title">${name}</h3>
+        <p class="ecard-excerpt">${desc}</p>
+      </div>
+      <div class="ecard-foot">
+        <div class="vic-badge">⚠ ${ev.vN[lang]}</div>
+        <button class="rmb" onclick="toggleCard(this)" aria-expanded="false">
+          <span class="btn-txt">${readMore}</span>
+          <span class="arr" aria-hidden="true">▼</span>
+        </button>
+      </div>
+      <div class="ecard-expand" aria-hidden="true">
+        <p class="ecard-long">${desc}</p>
+        <div class="srcs-box">
+          <div class="srcs-ttl">📚 ${srcsTitle}</div>
+          ${buildSourcesHTML(ev.sources)}
+        </div>
+      </div>`;
+
+    card.querySelector(".ecard-head, .ecard-body").addEventListener("click", () => openModal(ev));
+    container.appendChild(card);
+  });
+}
+
+function toggleCard(btn) {
+  const card = btn.closest(".ecard");
+  const isOpen = card.classList.toggle("open");
+  const txtEl = btn.querySelector(".btn-txt");
+  const expand = card.querySelector(".ecard-expand");
+  txtEl.textContent = isOpen ? (lang === "ar" ? "إخفاء" : "Collapse") : (lang === "ar" ? "اقرأ المزيد" : "Read more");
+  btn.setAttribute("aria-expanded", isOpen);
+  expand.setAttribute("aria-hidden", !isOpen);
+}
+
+function openModal(ev) {
+  const name = lang === "ar" ? ev.nA : ev.nE;
+  const loc = lang === "ar" ? ev.lA : ev.lE;
+  const desc = lang === "ar" ? ev.dA : ev.dE;
+  const date = ev.dd[lang];
+  const regionName = REGIONS[ev.region] ? REGIONS[ev.region][lang] : ev.region;
+
+  document.getElementById("modalDate").textContent = `${date} · ${loc}`;
+  document.getElementById("modalTitle").textContent = name;
+  document.getElementById("modalTags").innerHTML =
+    `<span class="mtag mtag-r">📍 ${regionName}</span><span class="mtag mtag-v">⚠ ${ev.vN[lang]}</span>`;
+  document.getElementById("modalDesc").textContent = desc;
+  document.getElementById("modalSrcs").innerHTML = buildSourcesHTML(ev.sources);
+  document.getElementById("modalSrcsTitle").textContent = lang === "ar" ? "المصادر والمراجع" : "Sources & References";
+
+  const overlay = document.getElementById("modalOverlay");
+  overlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+  document.getElementById("modalClose").focus();
+}
+
+function closeModal() {
+  document.getElementById("modalOverlay").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+async function fetchDaily() {
+  const btn = document.getElementById("fetchBtn");
+  const icon = document.getElementById("fetchIcon");
+  const txt = document.getElementById("fetchTxt");
+  const spinner = document.getElementById("dailySpinner");
+  const empty = document.getElementById("dailyEmpty");
+  const results = document.getElementById("dailyResults");
+  const list = document.getElementById("dailyList");
+  const ftr = document.getElementById("dailyFtr");
+  const statusTxt = document.getElementById("dailyStatusTxt");
+  const stage = document.getElementById("spinnerStage");
+  const msg = document.getElementById("spinnerMsg");
+
+  btn.disabled = true;
+  icon.textContent = "⏳";
+  txt.textContent = lang === "ar" ? "جارٍ الجلب..." : "Fetching...";
+  empty.style.display = "none";
+  results.style.display = "none";
+  ftr.style.display = "none";
+  spinner.style.display = "flex";
+
+  const stageMessages = lang === "ar"
+    ? ["جارٍ البحث عن أحداث اليوم...", "تحليل المصادر الموثوقة...", "استخراج التفاصيل الكاملة...", "تنظيم النتائج..."]
+    : ["Searching today's events...", "Analyzing reliable sources...", "Extracting full details...", "Organizing results..."];
+  let si = 0;
+  const stageInterval = setInterval(() => {
+    si = (si + 1) % stageMessages.length;
+    stage.textContent = stageMessages[si];
+  }, 2200);
+
+  stage.textContent = stageMessages[0];
+  msg.textContent = lang === "ar"
+    ? "يبحث الذكاء الاصطناعي عن أحدث الأحداث الموثقة من مصادر عالمية موثوقة..."
+    : "AI is searching for the latest documented events from trusted global sources...";
+
+  const today = new Date();
+  const todayStr = today.toLocaleDateString("en-GB", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+
+  const prompt = `Today is ${todayStr}.
+
+You are a professional human rights documentation researcher. Search the web for recent news (last 48-72 hours) about violence, crimes, massacres, attacks, persecution, or serious human rights violations targeting Muslims anywhere in the world.
+
+Find 3-5 distinct, documented events or ongoing situations. For each event provide:
+- A clear, factual title
+- Exact or approximate date
+- Geographic location (country and city/region)
+- Detailed description (at least 150 words) covering: what happened, who was involved, scale of victims/impact, context, and significance
+- Number of victims (killed/injured/displaced) if known, or describe the scale
+- 2-3 reliable source references with realistic URLs from news agencies, HRW, Amnesty, UN, Wikipedia, BBC, Al Jazeera, Reuters, etc.
+
+Respond ONLY with a valid JSON array. No markdown, no backticks, no extra text. Format:
+[
+  {
+    "titleAr": "العنوان بالعربية",
+    "titleEn": "Title in English",
+    "dateStr": "date string",
+    "locationAr": "الموقع بالعربية",
+    "locationEn": "Location in English",
+    "region": "one of: middle-east|south-asia|southeast-asia|central-asia|africa|caucasus|balkans|europe|other",
+    "victims": "description of victim count or scale",
+    "descriptionAr": "وصف تفصيلي باللغة العربية بما لا يقل عن 120 كلمة",
+    "descriptionEn": "Detailed description in English at least 120 words",
+    "sources": [
+      {"title": "Source Name – Article Title", "url": "https://realistic-url.com"}
+    ]
+  }
+]`;
+
+  try {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 4000,
+        tools: [{ type: "web_search_20250305", name: "web_search" }],
+        messages: [{ role: "user", content: prompt }]
+      })
+    });
+
+    clearInterval(stageInterval);
+
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+    const data = await response.json();
+    const rawText = (data.content || [])
+      .filter(b => b.type === "text")
+      .map(b => b.text)
+      .join("");
+
+    let parsed = [];
+    try {
+      const jsonMatch = rawText.match(/\[[\s\S]*\]/);
+      if (jsonMatch) parsed = JSON.parse(jsonMatch[0]);
+    } catch (pe) {
+      throw new Error("JSON parse failed");
+    }
+
+    if (!Array.isArray(parsed) || parsed.length === 0) throw new Error("Empty results");
+
+    list.innerHTML = "";
+    parsed.forEach(ev => {
+      const title = lang === "ar" ? (ev.titleAr || ev.titleEn) : (ev.titleEn || ev.titleAr);
+      const loc = lang === "ar" ? (ev.locationAr || ev.locationEn) : (ev.locationEn || ev.locationAr);
+      const desc = lang === "ar" ? (ev.descriptionAr || ev.descriptionEn) : (ev.descriptionEn || ev.descriptionAr);
+      const srcsTitle = lang === "ar" ? "المصادر والمراجع" : "Sources & References";
+
+      const srcsHTML = (ev.sources || []).map(s =>
+        `<div class="src-row"><div class="src-dot"></div><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.title}</a></div>`
+      ).join("");
+
+      const regionLabel = ev.region && REGIONS[ev.region] ? REGIONS[ev.region][lang] : (ev.region || "");
+
+      const el = document.createElement("div");
+      el.className = "devent";
+      el.innerHTML = `
+        <div class="devent-head">
+          <div class="devent-meta">
+            <span class="devent-datestr">${ev.dateStr || todayStr}</span>
+            <span class="devent-loc">📍 ${loc}</span>
+          </div>
+          ${regionLabel ? `<span class="dtag dtag-r">${regionLabel}</span>` : ""}
+        </div>
+        <div class="devent-title">${title}</div>
+        <div class="devent-body">
+          <p class="devent-desc">${desc}</p>
+          <div class="devent-tags">
+            <span class="dtag dtag-v">⚠ ${ev.victims || (lang === "ar" ? "انظر التفاصيل" : "See details")}</span>
+            <span class="dtag dtag-t">${lang === "ar" ? "مصدر موثق" : "Documented Source"}</span>
+          </div>
+          <div class="devent-srcs">
+            <div class="srcs-ttl">📚 ${srcsTitle}</div>
+            ${srcsHTML || `<div class="src-row"><div class="src-dot"></div><span style="color:var(--t3);font-size:.78rem">${lang === "ar" ? "يُراجع المصادر العامة" : "General sources referenced"}</span></div>`}
+          </div>
+        </div>`;
+      list.appendChild(el);
+    });
+
+    dailyCount++;
+    localStorage.setItem("enc-daily-count", dailyCount);
+    document.getElementById("sDailyCount").textContent = dailyCount;
+
+    spinner.style.display = "none";
+    results.style.display = "block";
+    ftr.style.display = "flex";
+    document.getElementById("newBadge").style.display = "inline-flex";
+    document.getElementById("clearBtn").style.display = "inline-flex";
+    dailyFetched = true;
+
+    const ftrInfo = document.getElementById("dailyFtrInfo");
+    ftrInfo.innerHTML = lang === "ar"
+      ? `تم الجلب في: <strong>${new Date().toLocaleTimeString("ar-EG")}</strong> · <strong>${parsed.length}</strong> أحداث موثقة`
+      : `Fetched at: <strong>${new Date().toLocaleTimeString("en-GB")}</strong> · <strong>${parsed.length}</strong> documented events`;
+
+    statusTxt.textContent = lang === "ar"
+      ? `تم تحديث التوثيق بنجاح — ${parsed.length} أحداث جديدة`
+      : `Documentation updated successfully — ${parsed.length} new events`;
+
+    btn.disabled = false;
+    icon.textContent = "✓";
+    txt.textContent = lang === "ar" ? "تم التحديث" : "Updated";
+
+  } catch (err) {
+    clearInterval(stageInterval);
+    spinner.style.display = "none";
+    empty.style.display = "flex";
+    empty.querySelector(".daily-empty-ico").textContent = "⚠";
+    empty.querySelector("p").textContent = lang === "ar"
+      ? `حدث خطأ أثناء جلب البيانات. تأكد من الاتصال بالإنترنت وحاول مرة أخرى. (${err.message})`
+      : `An error occurred while fetching data. Check your internet connection and try again. (${err.message})`;
+    btn.disabled = false;
+    icon.textContent = "🔍";
+    txt.textContent = lang === "ar" ? "إعادة المحاولة" : "Retry";
+    statusTxt.textContent = lang === "ar" ? "فشل الجلب — يرجى المحاولة مرة أخرى" : "Fetch failed — please try again";
+  }
+}
+
+function clearDaily() {
+  const empty = document.getElementById("dailyEmpty");
+  const results = document.getElementById("dailyResults");
+  const ftr = document.getElementById("dailyFtr");
+  results.style.display = "none";
+  ftr.style.display = "none";
+  empty.style.display = "flex";
+  empty.querySelector(".daily-empty-ico").textContent = "🌐";
+  empty.querySelector("p").textContent = lang === "ar"
+    ? "يستخدم الذكاء الاصطناعي محرك بحث متصل بالإنترنت لجلب آخر الأحداث الموثقة..."
+    : "AI uses a live web search engine to fetch the latest documented events...";
+  document.getElementById("newBadge").style.display = "none";
+  document.getElementById("clearBtn").style.display = "none";
+  document.getElementById("fetchIcon").textContent = "🔍";
+  document.getElementById("fetchTxt").textContent = lang === "ar" ? "جلب أحداث اليوم" : "Fetch Today's Events";
+  document.getElementById("dailyStatusTxt").textContent = lang === "ar"
+    ? "اضغط على 'جلب أحداث اليوم' للحصول على آخر الأحداث الموثقة"
+    : "Press 'Fetch Today's Events' to get the latest AI-documented events";
+  dailyFetched = false;
+}
+
+document.getElementById("langBtn").addEventListener("click", () => {
+  lang = lang === "ar" ? "en" : "ar";
+  localStorage.setItem("enc-lang", lang);
+  applyLang();
+});
+
+document.getElementById("themeBtn").addEventListener("click", () => {
+  theme = theme === "dark" ? "light" : "dark";
+  localStorage.setItem("enc-theme", theme);
+  applyTheme();
+});
+
+document.getElementById("searchInput").addEventListener("input", e => {
+  query = e.target.value.trim();
+  renderGrid();
+});
+
+document.querySelectorAll(".chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    document.querySelectorAll(".chip").forEach(c => { c.classList.remove("on"); c.setAttribute("aria-pressed", "false"); });
+    chip.classList.add("on"); chip.setAttribute("aria-pressed", "true");
+    region = chip.dataset.r;
+    renderGrid();
+  });
+});
+
+document.getElementById("sortSel").addEventListener("change", e => {
+  sort = e.target.value;
+  renderGrid();
+});
+
+document.getElementById("vGrid").addEventListener("click", () => {
+  view = "grid";
+  document.getElementById("eventsGrid").classList.remove("list-view");
+  document.getElementById("vGrid").classList.add("on"); document.getElementById("vGrid").setAttribute("aria-pressed", "true");
+  document.getElementById("vList").classList.remove("on"); document.getElementById("vList").setAttribute("aria-pressed", "false");
+});
+
+document.getElementById("vList").addEventListener("click", () => {
+  view = "list";
+  document.getElementById("eventsGrid").classList.add("list-view");
+  document.getElementById("vList").classList.add("on"); document.getElementById("vList").setAttribute("aria-pressed", "true");
+  document.getElementById("vGrid").classList.remove("on"); document.getElementById("vGrid").setAttribute("aria-pressed", "false");
+});
+
+document.getElementById("fetchBtn").addEventListener("click", fetchDaily);
+document.getElementById("clearBtn").addEventListener("click", clearDaily);
+document.getElementById("refreshBtn").addEventListener("click", fetchDaily);
+document.getElementById("modalClose").addEventListener("click", closeModal);
+document.getElementById("modalOverlay").addEventListener("click", e => { if (e.target === e.currentTarget) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
+document.getElementById("sDailyCount").textContent = dailyCount;
+
+applyLang();
+applyTheme();
+updateDailyDatePill();
+</script>
+</body>
+</html>
