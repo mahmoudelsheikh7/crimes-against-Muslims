@@ -599,11 +599,11 @@ footer {
   </p>
   <div class="hero-stats">
     <div class="hstat">
-      <span class="hstat-n" id="sTotal">28</span>
+      <span class="hstat-n" id="sTotal">34</span>
       <span class="hstat-l" data-ar="حدث تاريخي موثق" data-en="Historical Events Documented">حدث تاريخي موثق</span>
     </div>
     <div class="hstat">
-      <span class="hstat-n">8</span>
+      <span class="hstat-n" id="sRegionCount">8</span>
       <span class="hstat-l" data-ar="مناطق جغرافية" data-en="Geographic Regions">مناطق جغرافية</span>
     </div>
     <div class="hstat">
@@ -695,10 +695,10 @@ footer {
     <div class="sec-title">
       <span aria-hidden="true">📚</span>
       <span data-ar="الأرشيف التاريخي" data-en="Historical Archive">الأرشيف التاريخي</span>
-      <span class="badge badge-arch" id="archBadge">28</span>
+      <span class="badge badge-arch" id="archBadge">34</span>
     </div>
     <div style="font-size:.78rem;color:var(--t3)">
-      <strong id="resNum" style="color:var(--gold);font-size:.88rem">28</strong>
+      <strong id="resNum" style="color:var(--gold);font-size:.88rem">34</strong>
       <span data-ar=" حدث موثق" data-en=" documented events"> حدث موثق</span>
     </div>
   </div>
@@ -1175,6 +1175,92 @@ const DB = [
       { title:"Human Rights Watch – Gaza: Unlawful Israeli Attacks", url:"https://www.hrw.org/topic/middle-east-n-africa/israel/palestine" },
       { title:"Amnesty International – New Evidence of Genocide Against Palestinians", url:"https://www.amnesty.org/en/latest/news/2024/12/israel-opt-new-evidence-of-genocide-against-palestinians-in-gaza/" }
     ]
+  },
+  {
+    id:29, year:1971, date:"1971-03-25",
+    dd:{ ar:"25 مارس – 16 ديسمبر 1971", en:"March 25 – December 16, 1971" },
+    nA:"الإبادة الجماعية في بنغلاديش", nE:"Bangladesh Genocide",
+    lA:"بنغلاديش (باكستان الشرقية سابقاً)", lE:"Bangladesh (former East Pakistan)",
+    region:"south-asia", victims:1000000,
+    vN:{ ar:"تقديرات تتراوح بين 300,000 وثلاثة ملايين قتيل", en:"Estimates range from 300,000 to 3 million killed" },
+    dA:"في 25 مارس 1971، شنّ الجيش الباكستاني عملية «الأضواء الكاشفة» ضد سكان باكستان الشرقية (بنغلاديش لاحقاً) وأغلبهم من المسلمين البنغاليين، استهدفت المدنيين والطلاب والمثقفين. استمرت الحرب تسعة أشهر وشهدت مجازر جماعية واغتصاباً منهجياً طال ما بين 200,000 و400,000 امرأة، ونزوح ملايين اللاجئين إلى الهند. اعترف الكونغرس الأمريكي عام 2022 رسمياً بالمجزرة كإبادة جماعية.",
+    dE:"On March 25, 1971, the Pakistani Army launched 'Operation Searchlight' against the population of East Pakistan (later Bangladesh), the majority of them Bengali Muslims, targeting civilians, students, and intellectuals. The nine-month war saw mass killings and systematic rape affecting an estimated 200,000 to 400,000 women, and millions fled as refugees to India. The US Congress formally recognized the killings as genocide in 2022.",
+    sources:[
+      { title:"Wikipedia – Bangladesh genocide", url:"https://en.wikipedia.org/wiki/Bangladesh_genocide" },
+      { title:"Wikipedia – Bangladesh Liberation War", url:"https://en.wikipedia.org/wiki/Bangladesh_Liberation_War" }
+    ]
+  },
+  {
+    id:30, year:1983, date:"1983-02-18",
+    dd:{ ar:"18 فبراير 1983", en:"February 18, 1983" },
+    nA:"مذبحة نيلي", nE:"Nellie Massacre",
+    lA:"الهند - ولاية آسام", lE:"India – Assam",
+    region:"south-asia", victims:2000,
+    vN:{ ar:"نحو 1,800 إلى أكثر من 2,000 قتيل رسمياً (وتقديرات غير رسمية أعلى بكثير)", en:"About 1,800 to over 2,000 officially killed (unofficial estimates far higher)" },
+    dA:"في يوم واحد، 18 فبراير 1983، هاجمت حشود من السكان المحليين في قرى نيلي بولاية آسام مهاجرين مسلمين من أصل بنغالي، في خضم حركة آسام المناهضة للمهاجرين. قُتل نحو 1,800 إلى 2,000 شخص وفق الأرقام الرسمية خلال ساعات قليلة، بينهم عدد كبير من النساء والأطفال. لم تتم محاسبة أي من الجناة قضائياً حتى اليوم رغم تشكيل لجنة تحقيق رسمية.",
+    dE:"In a single day, February 18, 1983, mobs of local residents in villages near Nellie, Assam, attacked Bengali-origin Muslim settlers amid the anti-immigrant Assam Movement. Official figures put the death toll at around 1,800 to 2,000 within a few hours, including large numbers of women and children. Despite an official inquiry commission, no perpetrators have ever been convicted.",
+    sources:[
+      { title:"Wikipedia – Nellie massacre", url:"https://en.wikipedia.org/wiki/Nellie_massacre" },
+      { title:"Encyclopaedia Britannica – Nellie massacre", url:"https://www.britannica.com/event/Nellie-massacre" }
+    ]
+  },
+  {
+    id:31, year:1992, date:"1992-04-01",
+    dd:{ ar:"1992–1994", en:"1992–1994" },
+    nA:"مجازر فوتشا ومعسكرات الاغتصاب", nE:"Foča Massacres and Rape Camps",
+    lA:"البوسنة والهرسك - فوتشا", lE:"Bosnia and Herzegovina – Foča",
+    region:"balkans", victims:0,
+    vN:{ ar:"مئات القتلى وآلاف ضحايا الاغتصاب المنهجي", en:"Hundreds killed, thousands subjected to systematic rape" },
+    dA:"خلال الحرب البوسنية، طرد شبه جيش صربي بوسني السكان المسلمين من فوتشا وقتل المئات منهم، وأنشأ عدة مراكز احتجاز حُبست فيها نساء وفتيات مسلمات وتعرّضن لاغتصاب منهجي ممتد. أدانت المحكمة الجنائية الدولية ليوغوسلافيا السابقة في قضية «كوناراتش» عام 2001 ثلاثة من الجناة، في أول سابقة قانونية دولية تصنّف الاغتصاب المنهجي كجريمة ضد الإنسانية والاسترقاق الجنسي.",
+    dE:"During the Bosnian War, Bosnian Serb paramilitary forces expelled the Muslim population of Foča and killed hundreds, establishing several detention centers where Muslim women and girls were held and subjected to prolonged, systematic rape. In the 2001 'Kunarac' case, the ICTY convicted three perpetrators — the first international legal precedent to classify systematic rape as a crime against humanity and enslavement.",
+    sources:[
+      { title:"Wikipedia – Foča massacres", url:"https://en.wikipedia.org/wiki/Fo%C4%8Da_massacres" },
+      { title:"ICTY – Kunarac, Kovač and Vuković case", url:"https://www.icty.org/en/case/kunarac" }
+    ]
+  },
+  {
+    id:32, year:2012, date:"2012-06-08",
+    dd:{ ar:"يونيو–أكتوبر 2012", en:"June–October 2012" },
+    nA:"أعمال شغب ولاية راخين", nE:"2012 Rakhine State Riots",
+    lA:"ميانمار - ولاية راخين", lE:"Myanmar – Rakhine State",
+    region:"southeast-asia", victims:200,
+    vN:{ ar:"أكثر من 200 قتيل ونزوح 140,000 شخص", en:"Over 200 killed and 140,000 displaced" },
+    dA:"في منتصف 2012، اندلعت أعمال عنف طائفي بين البوذيين والروهينغا المسلمين في ولاية راخين، أعقبتها هجمات منظمة استهدفت أحياء وقرى مسلمة بمشاركة سلطات محلية وفق توثيق هيومن رايتس ووتش. قُتل أكثر من 200 شخص ونزح نحو 140,000، معظمهم من الروهينغا، إلى مخيمات نزوح لا تزال قائمة. مهّدت هذه الأحداث للحملة الأوسع عام 2017.",
+    dE:"In mid-2012, communal violence erupted between Buddhists and Rohingya Muslims in Rakhine State, followed by organized attacks on Muslim neighborhoods and villages with the involvement of local authorities, as documented by Human Rights Watch. Over 200 people were killed and about 140,000 displaced, mostly Rohingya, into camps that remain in place. These events set the stage for the broader 2017 campaign.",
+    sources:[
+      { title:"Wikipedia – 2012 Rakhine State riots", url:"https://en.wikipedia.org/wiki/2012_Rakhine_State_riots" },
+      { title:"Human Rights Watch – 'The Government Could Have Stopped This'", url:"https://www.hrw.org/report/2012/08/01/government-could-have-stopped/sectarian-violence-and-ensuing-abuses-burmas-arakan" }
+    ]
+  },
+  {
+    id:33, year:2015, date:"2015-12-12",
+    dd:{ ar:"12–14 ديسمبر 2015", en:"December 12–14, 2015" },
+    nA:"مجزرة زاريا", nE:"Zaria Massacre",
+    lA:"نيجيريا - زاريا، ولاية كادونا", lE:"Nigeria – Zaria, Kaduna State",
+    region:"africa", victims:347,
+    vN:{ ar:"347 قتيلاً رسمياً (وتقديرات مستقلة تتجاوز 1,000)", en:"347 officially confirmed killed (independent estimates exceed 1,000)" },
+    dA:"في ديسمبر 2015، اشتبك الجيش النيجيري مع أتباع الحركة الإسلامية في نيجيريا (طائفة شيعية) في زاريا، وأعقب الاشتباك عملية قتل جماعي ودفن جثث في مقابر جماعية دون إبلاغ الأسر. وثّقت هيومن رايتس ووتش ومنظمة العفو الدولية الحادثة وطالبتا بتحقيق مستقل ومحاسبة، فيما اعترفت لجنة تحقيق قضائية رسمية بمقتل 347 شخصاً على الأقل.",
+    dE:"In December 2015, the Nigerian Army clashed with followers of the Islamic Movement in Nigeria (a Shia group) in Zaria; the clash was followed by mass killings and burial in unmarked mass graves without notifying families. Human Rights Watch and Amnesty International documented the incident and called for an independent investigation and accountability, while an official judicial inquiry acknowledged at least 347 deaths.",
+    sources:[
+      { title:"Wikipedia – Zaria massacre", url:"https://en.wikipedia.org/wiki/Zaria_massacre" },
+      { title:"Human Rights Watch – Nigeria: Investigate Massacre of Shia by Army", url:"https://www.hrw.org/news/2015/12/22/nigeria-investigate-massacre-shia-army" },
+      { title:"Amnesty International – Nigeria: Zaria killings", url:"https://www.amnesty.org" }
+    ]
+  },
+  {
+    id:34, year:2020, date:"2020-02-23",
+    dd:{ ar:"23–26 فبراير 2020", en:"February 23–26, 2020" },
+    nA:"أعمال شغب دلهي 2020", nE:"2020 Delhi Riots",
+    lA:"الهند - نيودلهي", lE:"India – New Delhi",
+    region:"south-asia", victims:53,
+    vN:{ ar:"53 قتيلاً غالبيتهم من المسلمين", en:"53 killed, the majority Muslims" },
+    dA:"في أعقاب احتجاجات على قانون الجنسية المثير للجدل، اندلعت أعمال عنف طائفي في شمال شرق دلهي استهدفت أحياء وممتلكات ومساجد مسلمة بمشاركة حشود مسلحة. قُتل 53 شخصاً غالبيتهم مسلمون وأُصيب المئات. وثّقت هيومن رايتس ووتش ومنظمة العفو الدولية شهادات على تقاعس الشرطة وتواطؤ بعض عناصرها في العنف.",
+    dE:"Following protests against a controversial citizenship law, communal violence broke out in northeast Delhi, targeting Muslim neighborhoods, property, and mosques by armed mobs. 53 people were killed, the majority Muslims, and hundreds were injured. Human Rights Watch and Amnesty International documented testimony of police inaction and complicity by some officers in the violence.",
+    sources:[
+      { title:"Wikipedia – 2020 Delhi riots", url:"https://en.wikipedia.org/wiki/2020_Delhi_riots" },
+      { title:"Human Rights Watch – India: Delhi Police Failed to Stop Riots", url:"https://www.hrw.org/news/2020/07/30/india-delhi-police-failed-stop-riots" },
+      { title:"Amnesty International – Delhi riots findings", url:"https://www.amnesty.org" }
+    ]
   }
 ];
 
@@ -1302,7 +1388,7 @@ function renderGrid() {
         </div>
       </div>`;
 
-    card.querySelector(".ecard-head, .ecard-body").addEventListener("click", () => openModal(ev));
+    card.querySelectorAll(".ecard-head, .ecard-body").forEach(el => el.addEventListener("click", () => openModal(ev)));
     container.appendChild(card);
   });
 }
@@ -1479,6 +1565,8 @@ document.getElementById("modalOverlay").addEventListener("click", e => { if (e.t
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
 
 document.getElementById("sDailyCount").textContent = dailyCount;
+document.getElementById("sTotal").textContent = DB.length;
+document.getElementById("sRegionCount").textContent = Object.keys(REGIONS).length;
 
 applyLang();
 applyTheme();
